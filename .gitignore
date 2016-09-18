@@ -2,3 +2,9 @@
 env/
 secrets.sh
 api.py
+.DS_Store
+*._
+.TemporaryItems
+.Trashes
+data/
+.vagrant/
