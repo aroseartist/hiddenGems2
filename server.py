@@ -28,6 +28,8 @@ app.jinja_env.auto_reload = True
 
 ###################### Core Routes ###########################
 
+
+
 @app.route('/')
 # Routes app index page to homepage
 def index():
@@ -45,7 +47,7 @@ if __name__ == "__main__":
     # app.debug = True
 
     # app.config['TRAP_HTTP_EXCEPTIONS'] = True
-    
+    # app.config['Testing'] = True
     # Use of debug toolbar
     # DebugToolbarExtension(app)
    
