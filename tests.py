@@ -51,27 +51,45 @@ class FlaskTestDatabase(TestCase):
         """Create some sample data."""
 
         # In case this is run more than once, empty out existing data
-        Popos.query.delete()
-        User.query.delete()
+        Places.query.delete()
 
         # Add places
-        self.popos = Popos(wifi='Yes', coord='37.795335, -122.401836', seating='Yes',
-                           neighborhood='Financial District')
-        self.popos = Popos(wifi='no', coord='37.794511, -122.403843', seating='Yes',
-                           neighborhood='Financial District/Chinatown')
-
-        self.popos_1 = SavedPopos(user_id=self.user_1.user_id,
-                                        petition_id=2310776,
-                                        date_signed='2016-08-18 21:25:03.300194')
-        self.popos_2 = SavedPopos(user_id=self.user_1.user_id,
-                                        petition_id=2298061)
-
+        self.places_1 = Places(name='Transamerica Pyramid Center',
+                               address='600 Montgomery Street',
+                               year_built=1972,
+                               description='This urban park, located at the foot of the Transamerica Pyramid.',
+                               features='Fountain, Bronze Sculptures',
+                               indoor_outdoor='Outdoor',
+                               wifi='no',
+                               seating='Yes',
+                               restroom='Yes',
+                               coord='37.795494, -122.402185',
+                               place_photo='/static/img/1.jpg'
+                               hours='M-F 7am-5:30pm',
+                               neighborhood='Financial District',
+                               wheelchair_accessible='Yes',
+                               url='https://www.yelp.com/biz/transamerica-redwood-park-san-francisco-2')
+        self.places_2 = Places(name='Transamerica Redwood Park',
+                               address='600 Montgomery Street',
+                               year_built=1972,
+                               description='This urban park, located at the foot of the Transamerica Pyramid.',
+                               features='Fountain, Bronze Sculptures',
+                               indoor_outdoor='Outdoor',
+                               wifi='no',
+                               seating='Yes',
+                               restroom='Yes',
+                               coord='37.795494, -122.402185',
+                               place_photo='/static/img/1.jpg'
+                               hours='M-F 7am-5:30pm',
+                               neighborhood='Financial District',
+                               wheelchair_accessible='Yes',
+                               url='https://www.yelp.com/biz/transamerica-redwood-park-san-francisco-2')
 
         # add all to the database
-        db.session.add_all([self.user_1, self.user_2, self.user_3, self.petition_1,
-                            self.petition_2, self.petition_3, self.petition_4])
+        db.session.add_all([self.places_1, self.places_2])
         # commit changes
         db.session.commit()
+
 
     def tearDown(self):
         """Things to do at end of every test"""
