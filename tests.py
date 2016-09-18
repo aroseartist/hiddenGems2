@@ -64,7 +64,7 @@ class FlaskTestDatabase(TestCase):
                                seating='Yes',
                                restroom='Yes',
                                coord='37.795494, -122.402185',
-                               place_photo='/static/img/1.jpg'
+                               place_photo='/static/img/1.jpg',
                                hours='M-F 7am-5:30pm',
                                neighborhood='Financial District',
                                wheelchair_accessible='Yes',
@@ -79,7 +79,7 @@ class FlaskTestDatabase(TestCase):
                                seating='Yes',
                                restroom='Yes',
                                coord='37.795494, -122.402185',
-                               place_photo='/static/img/1.jpg'
+                               place_photo='/static/img/1.jpg',
                                hours='M-F 7am-5:30pm',
                                neighborhood='Financial District',
                                wheelchair_accessible='Yes',
