@@ -32,9 +32,7 @@ app.jinja_env.auto_reload = True
 # Routes app index page to homepage
 def index():
     """Homepage."""
-    return render_template("base.html", input_box_name_here=None)
-
-
+    return render_template("contact.html", input_box_name_here=None)
 
 
 
