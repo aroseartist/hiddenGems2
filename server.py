@@ -17,6 +17,7 @@ from sys import argv
 
 
 app = Flask(__name__, static_url_path='/static')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # Required to use Flask sessions and debug toolbar
 app.secret_key = 'FLASK_SECRET_KEY'
 
