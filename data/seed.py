@@ -27,19 +27,21 @@ def load_popos():
         url,place_photo = row.split(",")
 
         popos = Popos(name=name,
-                        address=address,
-                        year_built=year_built,
-                        description=description,
-                        features=features,
-                        indoor_outdoor=indoor_outdoor,
-                        wifi=wifi,
-                        seating=seating,
-                        coord=coord,
-                        hours=hours,
-                        neighborhood=neighborhood,
-                        wheelchair_accessible=wheelchair_accessible,
-                        url=url,
-                        place_photo=place_photo)
+                      address=address,
+                      year_built=year_built,
+                      description=description,
+                      features=features,
+                      indoor_outdoor=indoor_outdoor,
+                      wifi=wifi,
+                      seating=seating,
+                      restroom=restroom,
+                      coord=coord,
+                      place_photo=place_photo,
+                      hours=hours,
+                      neighborhood=neighborhood,
+                      wheelchair_accessible=wheelchair_accessible,
+                      url=url)
+
 
         # We need to add to the session or it won't ever be stored
         db.session.add(popos)
