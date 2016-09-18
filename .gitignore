@@ -7,4 +7,3 @@ api.py
 .Trashes
 .vagrant/
 *.pyc
-*pyc
