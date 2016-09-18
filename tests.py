@@ -1,13 +1,11 @@
-import json
 import unittest
 from unittest import TestCase
-import server
 from server import app
+from model import connect_to_db, db, Places
 
 
 class FlaskRouteTests(TestCase):
     """Flask tests."""
-
 
 ############### Testing Necessities ###############
 
@@ -19,7 +17,6 @@ class FlaskRouteTests(TestCase):
 
         # Show Flask errors that happen during tests
         app.config['TESTING'] = True
-
 
 ################### Test Routes ##################
 
@@ -90,6 +87,13 @@ class FlaskTestDatabase(TestCase):
         # commit changes
         db.session.commit()
 
+    def test_find_place(self):
+        """Can we find a place in the database"""
+
+        # query the database for a place
+        place = Places.query.filter_by(name='Transamerica Pyramid Center').first()
+        # what result of query should be
+        self.assertEqual(place.wifi, 'no')
 
     def tearDown(self):
         """Things to do at end of every test"""
@@ -98,8 +102,6 @@ class FlaskTestDatabase(TestCase):
         db.session.close()
         # drop database
         db.drop_all()
-
-
 
 
 if __name__ == "__main__":
