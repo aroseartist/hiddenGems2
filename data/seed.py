@@ -11,22 +11,22 @@ from server import app
 
 
 def load_popos():
-    """Load popos from popos.csv into database."""
+    """Load places from places.csv into database."""
 
     print "Publicly Owned"
 
     # Delete all rows in table, so if we need to run this a second time,
     # we won't be trying to add duplicate users
-    Popos.query.delete()
+    Placess.query.delete()
 
     # Read legislator file and insert data
-    for row in open("data/popos_data/seeddb-popos.csv"):
+    for row in open("data/places.csv"):
         row = row.rstrip()
         name,address,year_built,description,features,indoor_outdoor,
         wifi,seating,restroom,coord,hours,neighborhood,wheelchair_accessible,
         url,place_photo = row.split(",")
 
-        popos = Popos(name=name,
+        places = Places(name=name,
                       address=address,
                       year_built=year_built,
                       description=description,
