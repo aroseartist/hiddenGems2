@@ -1,4 +1,4 @@
-CREATE TABLE Places (
+CREATE TABLE places (
   id serial PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
@@ -17,7 +17,7 @@ CREATE TABLE Places (
   url VARCHAR(255)
 );
 
-INSERT INTO Places 
+INSERT INTO places 
   (name,address,year_built,description,features,indoor_outdoor,wifi,seating,restroom,coord,place_photo,hours,neighborhood,wheelchair_accessible,url) 
 
 VALUES 
