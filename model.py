@@ -13,7 +13,7 @@ class Places(db.Model):
 
     # create table named places with appropriate columns
     __tablename__ = 'places'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    place_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(60), nullable=False)
     address = db.Column(db.String(100), nullable=False)
     year_built = db.Column(db.Integer, nullable=True)
@@ -29,7 +29,6 @@ class Places(db.Model):
     neighborhood = db.Column(db.String(100), nullable=True)
     wheelchair_accessible = db.Column(db.String(100), nullable=True)
     url = db.Column(db.String(100), nullable=True)
-
 
 
 ##################### Helper Functions ######################

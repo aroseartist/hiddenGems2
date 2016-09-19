@@ -1,6 +1,5 @@
 """Utility file to seed database"""
 
-from sqlalchemy import func
 from model import connect_to_db, db, Places
 from server import app
 
@@ -18,9 +17,9 @@ def load_places():
     Places.query.delete()
 
     # Read legislator file and insert data
-    for row in open("data/places.tsv"):
+    for row in open("data/places1.csv"):
         row = row.rstrip()
-        place_id,name,address,year_built,description,features,indoor_outdoor,wifi,seating,restroom,coord,place_photo,hours,neighborhood,wheelchair_accessible,url = row.split("\t")
+        place_id, name, address, year_built, description, features, indoor_outdoor, wifi, seating, restroom, coord, place_photo, hours, neighborhood, wheelchair_accessible, url = row.split("|")
 
         place = Places(place_id=place_id,
                        name=name,
@@ -39,7 +38,6 @@ def load_places():
                        wheelchair_accessible=wheelchair_accessible,
                        url=url)
 
-
         # We need to add to the session or it won't ever be stored
         db.session.add(place)
 
@@ -56,4 +54,3 @@ if __name__ == "__main__":
     # In case tables haven't been created, create them
     db.create_all()
     load_places()
-
