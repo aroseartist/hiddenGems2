@@ -1,9 +1,9 @@
 CREATE TABLE Places (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id serial PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
   year_built INT,
-  description VARCHAR(255),
+  description VARCHAR(2000),
   features VARCHAR(255),
   indoor_outdoor VARCHAR(255),
   wifi VARCHAR(255),

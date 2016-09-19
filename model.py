@@ -13,11 +13,11 @@ class Places(db.Model):
 
     # create table named places with appropriate columns
     __tablename__ = 'places'
-    place_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(60), nullable=False)
     address = db.Column(db.String(100), nullable=False)
     year_built = db.Column(db.Integer, nullable=True)
-    description = db.Column(db.String(1000), nullable=True)
+    description = db.Column(db.String(2000), nullable=True)
     features = db.Column(db.String(100), nullable=True)
     indoor_outdoor = db.Column(db.String(100), nullable=False)
     wifi = db.Column(db.String(100), nullable=True)
