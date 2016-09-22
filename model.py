@@ -4,8 +4,8 @@
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
-##############################################################################
-# Model definitions
+
+###################### Model definitions #######################
 
 
 class Places(db.Model):
@@ -33,13 +33,16 @@ class Places(db.Model):
 
 ##################### Helper Functions ######################
 
+
 def connect_to_db(app, db_uri="postgresql:///places"):
     """Connects database to Flask app"""
 
     # Configured for use of PostgreSQL database
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///places'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.app = app
     db.init_app(app)
+
 
 
 if __name__ == "__main__":
