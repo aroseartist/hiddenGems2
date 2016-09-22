@@ -66,6 +66,7 @@
 	<!-- Our Company Section
         ========================================================================= -->
 	<section id="company" class="container">
+		{% if places %}
 		<div class="big_title">
 			<div class="big_title_txt montserrat_font">What they said about us</div>
 			<div class="text_und_big_title">
@@ -76,10 +77,11 @@
 		<div class="section_content">
 			<div class="row">
 				<div class="col-md-6 company_content_img_all">
+					{% for name in places %}
 					<div class="row">
 						<div class="company_img_block company_btn1">
 							<img src="/static/img/1.jpg" alt="Consulting" class="img_border">
-							<div class="company_img_desc"></div>
+							<div class="company_img_desc">{{ places.name }}</div>
 						</div>
 						<div class="company_img_block company_btn2">
 							<img src="/static/img/2.jpg" alt="Photography" class="img_border">
@@ -94,6 +96,7 @@
 							<div class="company_img_desc">Advertising</div>
 						</div>
 					</div>
+					{% endfor %}
 				</div>
 				<div class="col-md-6 company_content_parag_all">
 					<div class="company_content_parag company_prg1 opaque">
@@ -139,6 +142,7 @@
 				</div>
 			</div>
 		</div>
+		{% endif %}
 	</section>
 		
 
