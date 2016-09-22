@@ -10,19 +10,17 @@ import sys
 
 from model import connect_to_db, db, Places
 # Utilize Flask libraries
-from flask import (Flask, render_template, redirect, request, flash, jsonify)
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, redirect, request, flash, jsonify
 # Use toolbar for debugging
 # from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
 from sys import argv
 
-db = SQLAlchemy()
 app = Flask(__name__, static_url_path='/static')
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # Set a secret key to enable the flask session cookies and the debug toolbar
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", "seKriTz")
-
 
 # Ensures undefined variables in jinja raise an error
 app.jinja_env.undefined = StrictUndefined
@@ -31,14 +29,6 @@ app.jinja_env.auto_reload = True
 
 
 ###################### Core Routes ###########################
-
-def connect_to_db(app):
-    """Connect to database."""
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///places'
-    db.app = app
-    db.init_app(app)
-
 
 @app.route('/')
 # Routes app index page to homepage
