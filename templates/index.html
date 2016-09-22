@@ -18,6 +18,12 @@
     <link href="/static/css/jquery.bxslider.css" rel="stylesheet">
     <link href="/static/css/animate.css" rel="stylesheet">
 
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
+          
+          
+        
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -836,7 +842,16 @@
 			</div>
 		</div>
 	</section> -->
-
+	<div class="container">
+		<div id='map' style='width: 600px; height: 500px;'></div>
+		<script>
+		mapboxgl.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
+		var map = new mapboxgl.Map({
+	    container: 'map',
+	    style: 'mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse'
+		});
+		</script>
+	</div>
 
 	<!-- About Us Section
         ========================================================================= -->

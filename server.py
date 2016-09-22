@@ -30,20 +30,19 @@ app.jinja_env.auto_reload = True
 ###################### Core Routes ###########################
 
 
-
 @app.route('/')
 # Routes app index page to homepage
 def index():
     """Homepage."""
-    return render_template("index.html", input_box_name_here=None)
 
+    return render_template("index.html")
 
 
 ################### Helper Functions #######################
 
 # Listening or requests
 if __name__ == "__main__":
-    
+
     # Set debug=True in order to invoke the DebugToolbarExtension
     # app.debug = True
 
@@ -51,13 +50,12 @@ if __name__ == "__main__":
     # app.config['Testing'] = True
     # Use of debug toolbar
     # DebugToolbarExtension(app)
-   
+
     # connect_to_db(app)
 
     # Run app locally
     app.run(host='0.0.0.0')
-    
+
     #  Run app via Heroku
     # PORT = int(os.environ.get("PORT", 5000))
     # app.run(host="0.0.0.0", port=PORT)
-
