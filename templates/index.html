@@ -26,7 +26,7 @@
     <![endif]-->
   </head>
   <body>
-
+{% block body %}
 	
 	<!-- Loader page -->
 	<div id="pageloader">   
@@ -39,8 +39,7 @@
 
 
 	<!-- Primary Page Layout
-        ========================================================================= -->
-		
+        ========================================================================= -->		
 	<div id="home">
 	
 		<div id="slides_background_home">
@@ -60,7 +59,7 @@
 	
 	<!-- Our Company Section
         ========================================================================= -->
-	<section id="company" class="container">	
+	<section id="company" class="container">
 		<div class="big_title">
 			<div class="big_title_txt montserrat_font">What they said about us</div>
 			<div class="text_und_big_title">
@@ -69,12 +68,13 @@
 			<div class="big_title_txt_separ background_color"></div>
 		</div>
 		<div class="section_content">
+			
 			<div class="row">
 				<div class="col-md-6 company_content_img_all">
 					<div class="row">
 						<div class="company_img_block company_btn1">
-							<img src="/static/img/15.jpg" alt="Consulting" class="img_border">
-							<div class="company_img_desc">Consulting</div>
+							<img src="/static/img/1.jpg" alt="Consulting" class="img_border">
+							<div class="company_img_desc"></div>
 						</div>
 						<div class="company_img_block company_btn2">
 							<img src="/static/img/2.jpg" alt="Photography" class="img_border">
@@ -132,10 +132,25 @@
 						</div>
 					</div>
 				</div>
+			
 			</div>
 		</div>
 	</section>
 		
+
+		
+	<!-- Simple Text Background
+        ========================================================================= -->
+	<section id="simple_txt_background" class="text-center">
+		
+		<div class="big_title_txt_bg"> 
+			WE CHANGE <span class="text_color">IDEAS</span> TO <span class="text_color"> REALITIES</span>
+		</div>
+		<div class="big_title_txt_separ_bg background_color"></div>
+	</section>
+		
+
+
 
 	<!-- Our Team Section
         ========================================================================= -->
@@ -863,7 +878,7 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<div class="col-md-6 contact_content_left">
+				<div class="col-md-5 contact_content_left">
 					<div class="content_big_title">
 						Send us <span class="text_color">a message</span>
 					</div>
@@ -888,7 +903,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-md-5 col-md-offset-1">
+				<div class="col-md-6 col-md-offset-6">
 					<div class="content_big_title">
 						Get in <span class="text_color">touch</span>
 					</div>
@@ -929,7 +944,7 @@
 			
 		</div>
 	</section>
-	
+{% endblock %}	
 	
 	<!-- Footer
         ========================================================================= -->
