@@ -3,22 +3,21 @@
 # Import necessary modules, etc.
 
 # Utilize Jinja for HTML templates
-import jinja2
+from jinja2 import StrictUndefined
+# Utilize Flask libraries
+from flask import Flask, render_template, request, flash, redirect, session, jsonify
 # Access local env variables
 import os
 import sys
 
+import psycopg2
+
 from model import connect_to_db, db, Places
-# Utilize Flask libraries
-from flask import Flask, render_template, redirect, request, flash, jsonify
 # Use toolbar for debugging
 # from flask_debugtoolbar import DebugToolbarExtension
-from jinja2 import StrictUndefined
-from sys import argv
 
 app = Flask(__name__, static_url_path='/static')
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # Set a secret key to enable the flask session cookies and the debug toolbar
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", "seKriTz")
 
