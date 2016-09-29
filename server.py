@@ -29,7 +29,7 @@ app.jinja_env.auto_reload = True
 def index():
     """Homepage."""
 
-    places = db.session.execute("SELECT * FROM places").fetchall()
+    places = Places.query.all()
 
     return render_template("index.html", places=places)
 

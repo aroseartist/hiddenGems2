@@ -30,6 +30,12 @@ class Places(db.Model):
     wheelchair_accessible = db.Column(db.String(100), nullable=True)
     url = db.Column(db.String(100), nullable=True)
 
+    def __repr__(self):
+        """Provide helpful representation when printed."""
+
+        return "<Places name=%s address=%s>" % (self.name,
+                                               self.address)
+
 
 ##################### Helper Functions ######################
 
