@@ -80,20 +80,8 @@
 					{% for place in places %}
 					<div class="row">
 						<div class="company_img_block company_btn1">
-							<img src="/static/img/1.jpg" alt="Consulting" class="img_border">
+							<img src="{{ place.place_photo }}" alt="Consulting" class="img_border">
 							<div class="company_img_desc">{{ place.name }}</div>
-						</div>
-						<div class="company_img_block company_btn2">
-							<img src="/static/img/2.jpg" alt="Photography" class="img_border">
-							<div class="company_img_desc">Photography</div>
-						</div>
-						<div class="company_img_block company_btn3">
-							<img src="/static/img/3.jpg" alt="Web Design" class="img_border">
-							<div class="company_img_desc">Web Design</div>
-						</div>
-						<div class="company_img_block company_btn4">
-							<img src="/static/img/4.jpg" alt="Advertising" class="img_border">
-							<div class="company_img_desc">Advertising</div>
 						</div>
 					</div>
 					{% endfor %}
