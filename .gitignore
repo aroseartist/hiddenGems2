@@ -8,3 +8,4 @@ api.py
 .vagrant/
 *.pyc
 bootstrap-template/
+Sertin-bootstrap-template-onepage/
