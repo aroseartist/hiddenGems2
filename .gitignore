@@ -7,3 +7,4 @@ api.py
 .Trashes
 .vagrant/
 *.pyc
+bootstrap-template/
