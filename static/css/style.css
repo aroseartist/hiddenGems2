@@ -157,51 +157,11 @@ button{
 	font-weight: 700;
 }
 
-.fullbg_bigtxt_slider{
-	text-transform: uppercase;
-	color: white;
-	font-size: 48px;
-}
 
 .fullbg_smalltxt{
 	color: white;
 	font-size: 18px;
 	margin-bottom: 30px;
-}
-
-.fullgb_extratxt{
-	color: white;
-	font-weight: 700;
-	font-size: 60px;
-	background-color: rgba(0, 0, 0, 0.3);
-	border: solid 1px white;
-	padding: 25px 30px;
-	display: inline-block;
-}
-
-.fullgb_extratxt_span{
-	color: white;
-	font-weight: 700;
-	font-size: 60px;
-	border: solid 1px white;
-	padding: 25px 30px;
-	display: inline-block;
-	background-color: rgba(254, 254, 254, 1);
-}
-
-.btn_fullgb{
-	color: white;
-	text-transform: uppercase;
-	font-size: 16px;
-	border: solid 1px white;
-	padding: 15px 45px;
-	text-decoration: none;
-}
-
-.btn_fullgb:hover{
-	color: #333333;
-	background: white;
-	text-decoration: none;
 }
 
 
@@ -333,55 +293,6 @@ button{
 	z-index: 999;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
  	filter: alpha(opacity=1);
-}
-
-
-/* About Us Style 1 */
-.about_1 .company_btn{
-	margin-top: 58px;
-}
-
-.about_1 .company_content_parag p{
-	width: 96%;
-}
-
-
-
-/* About Us Style 2 */
-.about_2 .company_btn{
-	margin-top: 58px;
-}
-
-.about_2 .company_content_parag p{
-	width: 96%;
-}
-
-
-
-
-
-/* About Us Style 3 */
-.about_3 .about_3_btn{
-	font-size: 24px;
-	border: solid 1px #333333;
-	padding: 12px 45px;
-	margin: 0 10px;
-	display: inline-block;
-}
-
-.about_3 .about_3_btn:hover{
-	cursor: pointer;
-}
-
-.about_3_parag{
-	width: 540px;
-	margin: 0 auto;
-	margin-top: 45px;
-	margin-bottom: 50px;
-}
-
-.about_3_pimg{
-	margin-top: 40px;
 }
 
 
