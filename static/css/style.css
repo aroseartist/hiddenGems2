@@ -137,41 +137,6 @@ button{
 }
 
 
-/* Super Slides Navigation */
-
-.slides-navigation {
-	margin: 0 auto;
-	position: absolute;
-	z-index: 3;
-	top: 45%;
-	width: 100%;
-}
-.slides-navigation a {
-	position: absolute;
-	top:50%;
-	cursor:pointer;
-	opacity: 0;
-	z-index:1000;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-}
-
-.slides-navigation a.prev {
-	height:60px;
-	width:32px;
-	left: 2%;
-	background:url(../img/arrow_left1.png) no-repeat;
-}
-
-.slides-navigation a.next {
-	height:60px;
-	width:32px;
-	right: 2%;
-	background:url(../img/arrow_right1.png) no-repeat;
-}
-
-
 #home:hover .slides-navigation a{
 	opacity:0.6;
 }
