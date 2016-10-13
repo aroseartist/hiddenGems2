@@ -136,35 +136,6 @@ button{
 	background:url(../img/bg24.jpg) center fixed ;
 }
 
-
-#home:hover .slides-navigation a{
-	opacity:0.6;
-}
-
-.slides-navigation a:hover{
-	opacity:1 !important;
-}
-
-
-/* Super Slide text inside */
-.homesliders .bx-wrapper .bx-viewport{
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	border: 0px;
-	background: transparent;
-}
-
-.homesliders .fullbg_bigtxt{
-	margin-top: 0px;
-}
-
-.homesliders .logo{
-	margin-bottom: 40px;
-}
-
-
-
 /* Content Fixed Full Background */
 .main{
 	position:absolute;
