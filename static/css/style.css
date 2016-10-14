@@ -594,48 +594,13 @@ button{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	.navbar-brand img{
-		vertical-align: initial;
-	}
-	.bgt_left, .bgt_right{
-		display: none;
-	}
 	.big_title_txt_bg{
 		position: initial;
-	}
-	.price3_col{
-		width: 480px;
-		text-align: center;
-	}
-	.price_middle_col{
-		margin: 0;
-	}
-	.price_3col{
-		margin-bottom: 45px;
-		width: 100%;
-	}
-	.portfolio_navigation_list a{
-		display: inline-block;
-		margin: 10px 0;
-	}
-	.portfolio_navigation_list li{
-		display: inline-block;
-	}
-	.portfolio_items{
-		width: 572px;
-		margin: 25px auto;
 	}
 	.testimonials_content_author {
 		display: inline-block;
 		clear: both;
 		margin-bottom: 45px;
-	}
-	.blog-content{
-		width: 376px;
-		margin: 0 auto;
-	}
-	.subscribe_form_input{
-		width: 510px;
 	}
 	.contact_form_name{
 		margin-bottom: 20px
@@ -643,22 +608,6 @@ button{
 	.contact_content_left{
 		margin-bottom: 35px;
 	}
-
-	/* Projet 3 */
-	.project_3_right{
-		margin-bottom: 35px;
-	}
-
-	/* Projet 4 */
-	.project_4_right{
-		margin-bottom: 35px;
-	}
-
-	/* Projet 5 */
-	.project_5_left{
-		margin-bottom: 35px;
-	}
-
 }
 
 /* Small Devices, Tablets */
@@ -683,63 +632,13 @@ button{
 		margin: 0 auto;
 		height: 340px;
 	}
-	.portfolio_items{
-		width: 285px;
-		margin: 25px auto;
-	}
-	.subscribe_form_input{
-		margin-bottom: 20px;
-		width: 420px;
-	}
-
+	
 	/* About */
 	#about .about_3_parag {
 		width: 90%;
 	}
-	.footer2_logo {
-		float: none;
-		text-align: center;
-		display: block;
-		margin: 10px 0;
-	}
-	.footer2_social {
-		float: none;
-		text-align: center;
-		display: block;
-		margin: 30px 0 0;
-	}
 	.footer4 p {
 		width: 90%;
-	}
-	.price2_col {
-		width: 370px;
-	}
-	.price_2col{
-		margin-bottom: 35px;
-		margin-right: 0;
-		margin-left: 0;
-	}
-	.price3_col {
-		width: 290px;
-	}
-	.price4_col{
-		width: 300px;
-		margin: 0 auto;
-	}
-
-	.product_3 .img-responsive{
-		display: inline-block;
-		margin-bottom: 20px;
-	}
-	.team3_info {
-		margin-left: 0px;
-	}
-	.blogsidebar .blog-post {
-		width: 100%;
-		margin: 8px 0px;
-	}
-	.menu_dark2_logo_center {
-		left: 0;
 	}
 }
 
@@ -748,14 +647,6 @@ button{
 	.content_big_title{
     	padding: 12px 35px 12px 15px;
     }
-	.skills_content_block{
-		float: left;
-		width: 100%;
-		position: relative;
-		min-height: 1px;
-		padding-right: 15px;
-		padding-left: 15px;
-	}
 	.company_content_img_all{
 		float: initial;
 		width: 320px;
@@ -776,67 +667,10 @@ button{
 		margin: 0 auto;
 		height: 430px;
 	}
-    .price3_col{
-		width: 260px;
-		text-align: center;
-	}
-	.blog-content{
-		width: 280px;
-		margin: 0 auto;
-	}
-	.blog-post {
-		width: 280px;
-	}
-	.blog-post img{
-		display: block;
-	  	max-width: 100%;
-	  	height: auto;
-	}
-	.blog_content_title {
-		font-size: 17px;	
-	}
-	.subscribe_form_input{
-		margin-bottom: 20px;
-		width: 300px;
-	}
-	#video .big_title_txt_bg{
-		font-size: 28px;
-	}
-
-	/* Portfolio 1 */
-	.project_1_btn a{
-		display: inline-block;
-		margin: 0 25px 15px;
-	}
-
-	/* Portfolio 5 */
-	#project_5 #bx-pager img {
-		margin: 3px 5px;
-	}
-
 
 	/* About */
 	#about .about_1 .content_big_title {
 		padding: 12px 30px 12px 15px;
-	}
-	.price2_col {
-		width: 280px;
-	}
-	.price_2col{
-		width: 100%;
-	}
-	.testimonial1_info {
-		width: 100%; 
-		margin-left: 0;
-		margin-top: 15px;
-	}
-	
-	.menu_dark2_logo_center {
-		left: 0;
-	}
-
-	.footer2_social a {
-		margin: 0 15px;
 	}
 }
 
