@@ -507,25 +507,6 @@ button{
 }
 
 
-/* Contact 2 Section */
-.contact2_form_block{
-	width: 775px;
-	margin: 0 auto;
-	margin-top: 45px;
-}
-
-.contact2_form_bin{
-	margin-bottom: 20px;
-}
-
-.contact2_form_btn{
-	margin-top: 20px;
-}
-
-.contact2_form_btn .contact_form_bnt{
-	padding: 12px 65px;
-}
-
 .contact2_social_btn{
 	color: #333333;
 	border: solid 1px #333333;
@@ -538,40 +519,6 @@ button{
 	margin-top: 45px;
 }
 
-
-
-/* Contact 3 section */
-.conatat3_name{
-	margin-bottom: 10px;
-}
-
-#contact3 .contact_form_message_block{
-	margin-top: 10px;
-}
-
-#contact3 .contact_form_btn_block{
-	margin-top: 10px;
-}
-
-#contact3 .contact_form_bnt{
-	padding: 12px 60px;
-}
-
-#contact3 .contact_form{
-	margin-top: 0;
-}
-
-.contact3_address{
-	margin-bottom: 30px;
-}
-
-.contact3_tel, .contact3_mail, .contact3_site{
-	line-height: 27px;
-}
-
-#contact3 .contact_right_details span{
-	font-weight: 400; 
-}
 
 /* Footer 2 */
 .footer2{
