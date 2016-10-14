@@ -676,49 +676,10 @@ button{
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
-	.overlay_p{
-		width: 215px;
-	}
-	.managers_ins_stb{
-		display: none;
-		margin-top: 65px;
-	}
-	.managers_ins_p{
-		display: none;
-	}
-	.managers_ins_name{
-		padding: 12px 19px;
-	}
-	.tweet_top_border {
-		width: 65px;
-	}
-	.tweet_buttom_border {
-		width: 188px;
-	}
-	.subscribe_form_input{
-		width: 260px;
-	}
 	#contact .content_big_title{
 		padding: 12px 30px 12px 15px;
 	}
 	.contact_form_bnt {
 		padding: 12px 35px;
 	}
-	.price2_col {
-		width: 250px;
-	}
-	.price2_col .price_btn_action {
-		padding: 12px 76px;
-	}
-	.price4_col {
-		width: 250px;
-	}
-	.price4_col .price_btn_action {
-		padding: 12px 76px;
-	}
-	.menu_dark2_logo_center {
-		left: 0;
-	}
 }
-
-/*==========  Mobile First Method  ==========*/
