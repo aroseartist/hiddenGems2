@@ -506,7 +506,6 @@ button{
 	color: #505050;
 }
 
-
 .contact2_social_btn{
 	color: #333333;
 	border: solid 1px #333333;
@@ -518,40 +517,6 @@ button{
 .contact2_social{
 	margin-top: 45px;
 }
-
-
-/* Footer 2 */
-.footer2{
-	clear: both;
-	padding-top: 35px;
-	padding-bottom: 30px;
-	border-top: solid 1px #333333;
-}
-
-.footer2_logo{
-	float: left;
-}
-
-.footer2_social{
-	float: right;
-}
-
-.footer2_social a{
-	color: #333333;
-	margin-left: 45px;
-	font-size: 14px;
-	font-weight: 400; 
-}
-
-
-/* Footer 3 */
-.footer3{
-	padding: 35px 0;
-	background-color: #333333;
-	color: white;
-	font-size: 14px;
-}
-
 
 /* Footer 4 */
 .footer4{
@@ -575,97 +540,6 @@ button{
 	margin: 5px 8px;
 	display: inline-block;
 }
-
-
-/* Dark menu1 */
-.menu_dark1 .navbar-topaz{
-	background-color: #333333;
-	color: white;
-}
-
-.menu_dark1 .navbar a{
-	color: white;
-}
-
-.menu_dark1 .dropdown-menu{
-	background-color: #333333;
-}
-
-.menu_dark1 .dropdown-menu>li>a, .menu_dark1 .dropdown-menu>li>a{
-	color: white;
-}
-
-
-
-/* Dark menu2 */
-.menu_dark2 .navbar-topaz{
-	background-color: #333333;
-	color: white;
-}
-
-.menu_dark2 .navbar a{
-	color: white;
-}
-
-.menu_dark2 .dropdown-menu{
-	background-color: #333333;
-}
-
-.menu_dark2 .dropdown-menu>li>a, .menu_dark2 .dropdown-menu>li>a{
-	color: white;
-}
-
-.menu_dark2_logo_center{
-	display: inline-block;
-	position: absolute;
-	left: 47%;
-	top: 0;
-}
-
-.menu_dark2_navbar{
-	text-align: center;
-}
-
-
-
-/* Dark menu3 */
-.menu_dark3 .navbar-topaz{
-	background-color: #333333;
-	color: white;
-}
-
-.menu_dark3 .navbar a{
-	color: white;
-}
-
-.menu_dark3 .dropdown-menu{
-	background-color: #333333;
-}
-
-.menu_dark3 .dropdown-menu>li>a, .menu_dark3 .dropdown-menu>li>a{
-	color: white;
-}
-
-.menu_dark3 .navsticky .nav>li>a{
-	line-height: 65px;
-}
-
-
-/* White Menu 2 */
-.menu_white2 .navbar-topaz{
-	border-top: solid 1px #333333; 
-}
-
-
-/* White Menu 3 */
-.menu_white3 .navbar-topaz{
-	border-top: solid 1px #333333; 
-}
-
-.menu_white3 .navsticky .nav>li>a{
-	line-height: 65px;
-}
-
 
 /* Product 2 Section */
 .purchase_btn{
