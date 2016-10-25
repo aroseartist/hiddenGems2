@@ -1,71 +1,54 @@
-/* Style for Colors */
-
 a:hover{
 	color: #f1ad1d;
 	text-decoration: none;
 }
-
 .montserrat_font{
 	font-family: 'Montserrat', sans-serif;
 }
-
 .text_color{
 	color: #f1ad1d;
 }
-
 .content_btn:hover{
 	color: #f1ad1d;
 }
-
 .background_color{
 	background-color: #f1ad1d;
 }
-
 .link_hoverw:hover{
 	color: #f1ad1d;
 	text-decoration: none;
 }
-
 .contact_form_bnt{
 	border: solid 1px #f1ad1d;
 	color: white;
 	background-color: #f1ad1d;
 }
-
 .contact_form_bnt:hover{
 	border: solid 1px #333333;
 	color: #f1ad1d;
 	background-color: #333333;
 }
-
 .follow_us_btn{
 	border: solid 1px #f1ad1d;
 	background-color: #f1ad1d;
 }
-
 .follow_us_btn:hover{
 	border: solid 1px #333333;
 	background-color: #333333;
 	color: #f1ad1d;
 }
-
-
 .link_hoverb:hover{
 	color: #f1ad1d;
 	text-decoration: none;
 	background-color: white;
 	background-image: none;
 }
-
 .company_img_block:hover .company_img_desc{
 	color: #f1ad1d;
 }
-
 #slides_background_home .slides-container .solid_bg{
 	background:#f1ad1d center fixed ;
 }
-
-
 .loader {
   border-left: 1.1em solid #f1ad1d;
 }
