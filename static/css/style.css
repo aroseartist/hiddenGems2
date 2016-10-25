@@ -4,22 +4,18 @@
 body {
     overflow:hidden;
 }
-
-/* Initial font */
 body, a, blockquote{
 	font-family: 'Lato', sans-serif;
 	font-weight: 400; 
 	color: #333333;
 	background: url(../img/body_bg.png);
 }
-
 p{
 	font-family: 'Lato', sans-serif;
 	font-weight: 400; 
 	color: #505050;
 	font-size: 14px;
 }
-
 a, input[type="submit"], input[type="reset"]{
 	text-decoration: none;
 	-webkit-transition: all 0.2s linear;
@@ -27,17 +23,14 @@ a, input[type="submit"], input[type="reset"]{
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-
 *:focus {
     outline: 0;
 }
-
 .space{
 	width: 100%;
 	margin: 52px 0;
 	height: 10px;
 }
-
 button{
 	background-color: white;
 	border: solid 1px #333333;
@@ -45,10 +38,6 @@ button{
 	padding: 12px 22px;
 	color: #333333;
 }
-
-
-/* Page Loading */
-
 #pageloader {
 	width: 100%;
 	height: 100%;
@@ -56,7 +45,6 @@ button{
 	z-index: 999999;
 	background: white;
 }
-
 .loader-item {
 	position: absolute;
 	width: auto;
@@ -66,7 +54,6 @@ button{
 	left:50%;
 	text-align:center;
 }
-
 .loader {
   margin: 6em auto;
   font-size: 5px;
@@ -79,7 +66,6 @@ button{
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
 }
-
 .loader,
 .loader:after {
   border-radius: 50%;
