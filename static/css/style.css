@@ -372,9 +372,6 @@ button{
 	color: white;
 	background-image: none;
 }
-
-
-/* Footer */
 .footer{
 	text-align: center;
 	color: #000000;
@@ -382,8 +379,6 @@ button{
 	padding: 35px 0px;
 	border-top: solid 1px #333333;
 }
-
-/* Simple text Backgound */
 #simple_txt_background{
 	background: url(../img/bg1.jpg) no-repeat 0 0 fixed;
 	width:100%;
@@ -397,7 +392,6 @@ button{
 	margin-top: 80px;
 	margin-bottom: 40px;
 }
-
 .big_title_txt_bg{
 	font-size: 22px;
 	color: white;
@@ -406,21 +400,17 @@ button{
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 }
-
 .big_title_left{
 	margin-top: 85px;
 	margin-bottom: 45px;
 }
-
 .big_title_txt_left{
 	font-size: 30px;
 }
-
 .text_und_big_title_left{
 	font-size: 14;
 	color: #505050;
 }
-
 .contact2_social_btn{
 	color: #333333;
 	border: solid 1px #333333;
@@ -428,26 +418,21 @@ button{
 	margin: 5px 8px;
 	display: inline-block;
 }
-
 .contact2_social{
 	margin-top: 45px;
 }
-
-/* Footer 4 */
 .footer4{
 	padding: 80px 0;
 	background-color: #333333;
 	color: white;
 	font-size: 14px;
 }
-
 .footer4 p{
 	color: white;
 	width: 615px;
 	margin: 45px auto; 
 	font-size: 12px
 }
-
 .footer4_social_btn{
 	color: white;
 	border: solid 1px white;
@@ -455,34 +440,22 @@ button{
 	margin: 5px 8px;
 	display: inline-block;
 }
-
 .section_content .nav-tabs>li.active>a{
 	border-bottom-color: transparent;
 	background-color: white;
 }
-
-/* Background ANimation */
 @-webkit-keyframes BackgroundAnimation {
     from {background-position: 0px 0px;}
     to {background-position: 9600px 0px;}
 }
-
 @-moz-keyframes  BackgroundAnimation {
     from {background-position: 0px 0px;}
     to {background-position: 9600px 0px;}
 }
-
 @-ms-keyframes  BackgroundAnimation {
     from {background-position: 0px 0px;}
     to {background-position: 9600px 0px;}
 }
-
-/*==================================================
-=            Bootstrap 3 Media Queries             =
-==================================================*/
-
-/*==========  Non-Mobile First Method  ==========*/
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.company_content_img_all{
@@ -506,7 +479,6 @@ button{
 		height: 340px;
 	}
 }
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.big_title_txt_bg{
@@ -524,7 +496,6 @@ button{
 		margin-bottom: 35px;
 	}
 }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.company_content_img_all{
@@ -547,8 +518,6 @@ button{
 		margin: 0 auto;
 		height: 340px;
 	}
-	
-	/* About */
 	#about .about_3_parag {
 		width: 90%;
 	}
@@ -556,7 +525,6 @@ button{
 		width: 90%;
 	}
 }
-
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 	.content_big_title{
@@ -582,13 +550,11 @@ button{
 		margin: 0 auto;
 		height: 430px;
 	}
-
 	/* About */
 	#about .about_1 .content_big_title {
 		padding: 12px 30px 12px 15px;
 	}
 }
-
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
 	#contact .content_big_title{
