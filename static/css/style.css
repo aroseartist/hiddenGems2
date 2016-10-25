@@ -72,7 +72,6 @@ button{
   width: 10em;
   height: 10em;
 }
-
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -93,35 +92,27 @@ button{
     transform: rotate(360deg);
   }
 }
-
-
-/* Super Slides background */
 #home {
 	width:100%;
 	height:auto;
 	position:relative;	
 }
-
 #slides_background_home {
 	position: relative;
 	background-color:black;
 }
-
 #slides_background_home .slides-container {
 	display: none;
 }
-
 #slides_background_home .slides-container  div,
 #slides_background_home .slides-container  img{
 	width:100%;
 	height:100%;
 }
-
 /* Change the picture of the home background here */
 #slides_background_home .slides-container .img0{
 	background:url(../img/bg24.jpg) center fixed ;
 }
-
 /* Content Fixed Full Background */
 .main{
 	position:absolute;
@@ -134,7 +125,6 @@ button{
 	min-height:300px;
 	padding-left: 70px;
 }
-
 .fullbg_bigtxt{
 	text-transform: uppercase;
 	color: white;
@@ -142,23 +132,17 @@ button{
 	margin-top: 30px;
 	font-weight: 700;
 }
-
-
 .fullbg_smalltxt{
 	color: white;
 	font-size: 18px;
 	margin-bottom: 30px;
 }
-
-
-/* Big Title */
 .big_title{
 	margin-top: 100px;
 	margin-bottom: 55px;
 	text-align: center;
 	font-size: 0px;
 }
-
 .big_title_txt{
 	font-size: 22px;
 	font-weight: 700;
@@ -166,21 +150,18 @@ button{
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
-
 .big_title_txt_separ{
 	width: 60px;
 	height: 3px;
 	display: inline-block;
 	margin-top: 35px;
 }
-
 .big_title_txt_separ_bg{
 	width: 60px;
 	height: 3px;
 	display: inline-block;
 	margin-top: 60px;
 }
-
 .big_title .fa_title{
 	background-color: #333333;
 	font-size: 60px;
@@ -191,42 +172,32 @@ button{
 	padding: 0 22px;
 	margin: 14px 0;
 }
-
 .big_title .fa_title .fa{
 	font-size: 48px;
 	position: relative;
 	top: -5px;
 }
-
-
 .text_und_big_title{
 	font-size: 17px;
 	color: #4d4943;
 }
-
-/* Content for section */
 .section_content{
 	margin-top: 15px;
 	margin-bottom: 55px;
 }
-
-/* Content for About Us */
 .about_content{
 	text-align: center;
 }
-
 .company_img_block{
 	position: relative;
 	display: inline-block;
 	margin: 0 10px 10px 0px;
 }
-
 .company_img_block img{
 	position: relative;
 	display: block;
 	max-width: 100%;
 }
-
 .company_img_desc{
 	position: absolute;
 	bottom: 10px;
@@ -240,23 +211,18 @@ button{
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-
 .company_img_block:hover .company_img_desc{
 	left: 30px;
 }
-
 .company_img_block:hover img{
 	opacity: 0.7;
 }
-
 .company_img_block:hover{
 	cursor: pointer;
 }
-
 .company_content_parag p{
 	text-align: justify;
 }
-
 .company_content_parag_all{
 	position: relative;
 	margin: 0;
@@ -273,16 +239,12 @@ button{
   	top: 0;
   	left: 0;
 }
-
 .opaque {
 	opacity:1;
 	z-index: 999;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
  	filter: alpha(opacity=1);
 }
-
-
-/* Style inner content */
 .content_big_title{
 	font-size: 18px;
 	display: inline-block;
@@ -292,7 +254,6 @@ button{
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 26px;
 }
-
 .content_btn{
 	color: white;
 	font-size: 14px;
@@ -301,27 +262,19 @@ button{
 	text-decoration: none;
 	background-image: none;
 }
-
 .content_btn:hover{
 	background: #333333;
 	text-decoration: none;
 }
-
 .company_btn{
 	margin-top: 59px;
 }
-
-
-/* Our Company Section */
 .img_border{
 	border: solid 1px #333333;
 }	
-	
-/* Contact Us Block */
 .contact_form{
 	margin-top: 20px;
 }
-
 .contact_form_name, .contact_form_email{
 	width: 100%;
 	padding: 10px;
@@ -330,43 +283,33 @@ button{
 	font-size: 14px;
 	font-style: italic;
 }
-
 .contact_form_name::-webkit-input-placeholder {
 	color: #525252;
 }
-
 .contact_form_name:-moz-placeholder { /* Firefox 18- */
 	color: #525252;  
 }
-
 .contact_form_name::-moz-placeholder {  /* Firefox 19+ */
 	color: #525252;  
 }
-
 .contact_form_name:-ms-input-placeholder {  
 	color: #525252;  
 }
-
 .contact_form_email::-webkit-input-placeholder {
 	color: #525252;
 }
-
 .contact_form_email:-moz-placeholder { /* Firefox 18- */
 	color: #525252;  
 }
-
 .contact_form_email::-moz-placeholder {  /* Firefox 19+ */
 	color: #525252;  
 }
-
 .contact_form_email:-ms-input-placeholder {  
 	color: #525252;  
 }
-
 .contact_form_message_block{
 	margin-top: 20px;
 }
-
 .contact_form_message{
 	width: 100%;
 	padding: 10px;
@@ -376,24 +319,19 @@ button{
 	font-style: italic;
 	height: 180px;
 }
-
 .contact_form_message::-webkit-input-placeholder {
 	color: #525252;
 }
-
 .contact_form_message:-moz-placeholder { /* Firefox 18- */
 	color: #525252;  
 }
-
 .contact_form_message::-moz-placeholder {  /* Firefox 19+ */
 	color: #525252;  
 }
-
 .contact_form_message:-ms-input-placeholder {  
 	color: #525252;
 	height: 180px;
 }
-
 .contact_form_bnt{
 	margin: 0;
 	padding: 0;
@@ -402,27 +340,19 @@ button{
 	margin-right: 15px;
 	text-transform: uppercase;
 }
-
 .contact_form_btn_block{
 	margin-top: 20px;
 }
-
 .contact_message{
 	font-size: 30px;
 }
-
-
-
-/* Contact Right Part */
 .contact_right_details{
 	margin-top: 20px;
 	margin-bottom: 35px;
 }
-
 .contact_right_details span{
 	margin-left: 5px;
 }
-
 .contact_right_details .fa{
 	background-color: #333333;
 	padding: 8px 0px 0px 0px;
@@ -431,7 +361,6 @@ button{
 	margin: 4px 0px;
 	text-align: center;
 }
-
 .follow_us_btn{
 	font-size: 18px;
 	width: 46px;
