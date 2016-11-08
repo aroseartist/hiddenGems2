@@ -54,42 +54,32 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<div class="col-md-6 company_content_img_all">
+				<div class="col-md-12 company_content_img_all">
 					{% for place in places %}
-					<div class="row">
 						<div class="company_img_block company_btn1">
-							<img src="{{ place.place_photo }}" alt="Consulting" class="img_border">
+							<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
 							<div class="company_img_desc">{{ place.title }}</div>
 						</div>
-					</div>
+						<p hidden id="details">{{ place.description }}</p>
 					{% endfor %}
-				</div>
-				<div class="col-md-6 company_content_parag_all">
-					<div class="company_content_parag company_prg1 opaque">
-						<div class="content_big_title">
-							Business <span class="text_color">Consulting</span>
-						</div>
-						<p>test language</p>
-						<div class="company_btn">
-							<a href="#" class="content_btn background_color">Check Our Projects</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 		{% endif %}
 	</section>
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script>
 
-	<!-- Simple Text Background -->
-	<section id="simple_txt_background" class="text-center">
-		<div class="big_title_txt_bg"> 
-			WE CHANGE <span class="text_color">IDEAS</span> TO <span class="text_color"> REALITIES</span>
-		</div>
-		<div class="big_title_txt_separ_bg background_color"></div>
-	</section>
+    	function showDetails(evt){
+    		$("p#details").show();
+    	}
+
+    	$("img#pic").on('click', showDetails);
+
+    </script>
 
 	<!-- Mapbox View -->
-	<div class="container">
+	<div class="container center">
 		<div id='map' style='width: 600px; height: 500px;'></div>
 		<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
 		<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
