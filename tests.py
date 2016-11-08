@@ -12,9 +12,9 @@ class FlaskRouteTests(TestCase):
     def setUp(self):
         """Things to do before each test"""
 
-        #Get the Flask test client
+        # Get the Flask test client
         self.client = app.test_client()
-        #Show Flask errors that happen during tests
+        # Show Flask errors that happen during tests
         app.config['TESTING'] = True
 
 ################### Test Routes ##################
@@ -23,7 +23,7 @@ class FlaskRouteTests(TestCase):
         """Test route to homepage."""
 
         result = self.client.get('/')
-        #Should get ok status code from / route
+        # Should get ok status code from / route
         self.assertEqual(result.status_code, 200)
 
 ################# Test Database #################
@@ -34,22 +34,22 @@ class FlaskTestDatabase(TestCase):
     def setUp(self):
         """Things to do before each test"""
 
-        #Get the Flask test client
+        # Get the Flask test client
         self.client = app.test_client()
-        #Show Flask errors that happen during tests
+        # Show Flask errors that happen during tests
         app.config['TESTING'] = True
-        #Connect to test database
+        # Connect to test database
         connect_to_db(app, "postgresql:///testdb")
-        #Create tables and add sample data
+        # Create tables and add sample data
         db.create_all()
-        #Add example data to test database
+        # Add example data to test database
         """Create some sample data."""
 
-        #If run more than once, empty out existing data
+        # If run more than once, empty out existing data
         Places.query.delete()
 
-        #Add places
-        self.places_1 = Places(name='Transamerica Pyramid Center',
+        # Add places
+        self.places_1 = Places(title='Transamerica Pyramid Center',
                                address='600 Montgomery Street',
                                year_built=1972,
                                description='This urban park, located at the foot of the Transamerica Pyramid.',
@@ -64,7 +64,7 @@ class FlaskTestDatabase(TestCase):
                                neighborhood='Financial District',
                                wheelchair_accessible='Yes',
                                url='https://www.yelp.com/biz/transamerica-redwood-park-san-francisco-2')
-        self.places_2 = Places(name='Transamerica Redwood Park',
+        self.places_2 = Places(title='Transamerica Redwood Park',
                                address='600 Montgomery Street',
                                year_built=1972,
                                description='This urban park, located at the foot of the Transamerica Pyramid.',
@@ -80,25 +80,25 @@ class FlaskTestDatabase(TestCase):
                                wheelchair_accessible='Yes',
                                url='https://www.yelp.com/biz/transamerica-redwood-park-san-francisco-2')
 
-        #Add all to the database
+        # Add all to the database
         db.session.add_all([self.places_1, self.places_2])
-        #Commit changes
+        # Commit changes
         db.session.commit()
 
     def test_find_place(self):
         """Can we find a place in the database"""
 
-        #Query the database for a place
-        place = Places.query.filter_by(name='Transamerica Pyramid Center').first()
-        #What result of query should be
+        # Query the database for a place
+        place = Places.query.filter_by(title='Transamerica Pyramid Center').first()
+        # What result of query should be
         self.assertEqual(place.wifi, 'no')
 
     def tearDown(self):
         """Things to do at end of every test"""
 
-        #Close the session
+        # Close the session
         db.session.close()
-        #Drop database
+        # Drop database
         db.drop_all()
 
 

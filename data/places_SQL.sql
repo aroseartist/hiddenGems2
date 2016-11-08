@@ -1,6 +1,6 @@
 CREATE TABLE places (
   id serial PRIMARY KEY,
-  name VARCHAR(255),
+  title VARCHAR(255),
   address VARCHAR(255),
   year_built INT,
   description VARCHAR(2000),
@@ -18,7 +18,7 @@ CREATE TABLE places (
 );
 
 INSERT INTO places 
-  (name,address,year_built,description,features,indoor_outdoor,wifi,seating,restroom,coord,place_photo,hours,neighborhood,wheelchair_accessible,url) 
+  (title,address,year_built,description,features,indoor_outdoor,wifi,seating,restroom,coord,place_photo,hours,neighborhood,wheelchair_accessible,url) 
 
 VALUES 
   ('Transamerica Redwood Park','600 Montgomery Street',1972,'This urban park, located at the foot of the Transamerica Pyramid, is a wonderful surprise. Surrounded by Redwood trees and graced with luscious ferns, the park features a fountain spouting water several feet high, and figurative bronze sculptures. There are also grassy areas, wooden benches and a concrete stage. Take-out food services are nearby. Closed after office hours.','Fountain, Bronze Sculptures','Outdoor','no','Yes','Yes','37.795494, -122.402185','/static/img/1.jpg','M-F 7am-5:30pm','Financial District','Yes','https://www.yelp.com/biz/transamerica-redwood-park-san-francisco-2'),

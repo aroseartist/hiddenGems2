@@ -11,10 +11,10 @@ db = SQLAlchemy()
 class Places(db.Model):
     """Places"""
 
-    # create table named places with appropriate columns
+    # Create table named places with appropriate columns
     __tablename__ = 'places'
     place_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(60), nullable=False)
+    title = db.Column(db.String(60), nullable=False)
     address = db.Column(db.String(100), nullable=False)
     year_built = db.Column(db.Integer, nullable=True)
     description = db.Column(db.String(2000), nullable=True)
@@ -33,7 +33,7 @@ class Places(db.Model):
     def __repr__(self):
         """Provide helpful representation when printed."""
 
-        return "<Places name=%s address=%s>" % (self.name,
+        return "<Places title=%s address=%s>" % (self.title,
                                                self.address)
 
 
