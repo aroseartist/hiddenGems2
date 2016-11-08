@@ -1,17 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Trocchi);
 
 body {
     overflow:hidden;
 }
 body, a, blockquote{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Trocchi', cursive, sans-serif;
     font-weight: 400; 
     color: #333333;
     background: url(../img/body_bg.png);
 }
 p{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Trocchi', sans-serif;
     font-weight: 400; 
     color: #505050;
     font-size: 14px;
@@ -37,6 +36,10 @@ button{
     font-size: 14px;
     padding: 12px 22px;
     color: #333333;
+}
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Trocchi', sans-serif;
 }
 #pageloader {
     width: 100%;
