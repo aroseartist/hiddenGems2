@@ -1,0 +1,327 @@
+﻿{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Embarcadero Center West"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.397395,
+          37.795183
+        ],
+        "type": "Point"
+      },
+      "id": "0bac428e78e411259a4b3b09c72de21a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "California Street Plaza"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.405228,
+          37.793005
+        ],
+        "type": "Point"
+      },
+      "id": "175d456bfd479f439417d1263d3aeaad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Market Street"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.400768,
+          37.789419
+        ],
+        "type": "Point"
+      },
+      "id": "181bf84bdb6b8583c62f28f5f5477bbe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "One California Building"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.39714,
+          37.793511
+        ],
+        "type": "Point"
+      },
+      "id": "1fc973ceb0355006cff06707ab6a10e4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Uber Building"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.400345,
+          37.78986
+        ],
+        "type": "Point"
+      },
+      "id": "2941860aa75e2c27ee7b07651b6bb5e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "McKesson Plaza"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.402687,
+          37.78897
+        ],
+        "type": "Point"
+      },
+      "id": "2d4336c352fd694ebdcc763c1b249b3c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Coworking Space"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.40489,
+          37.79315
+        ],
+        "type": "Point"
+      },
+      "id": "31daf44d2ae994e46fd899ae3a189538"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Pine Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.398759,
+          37.792616
+        ],
+        "type": "Point"
+      },
+      "id": "374ab46e27557c53e6d132ef82184132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Fifty California Building"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.39736,
+          37.794302
+        ],
+        "type": "Point"
+      },
+      "id": "3f7aec053f63845dd6fe3d9c1bef025b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Garden Terrace"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.398637,
+          37.79384
+        ],
+        "type": "Point"
+      },
+      "id": "41b691863445c67d49cd2537d826e767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "3 Empire Park"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.403843,
+          37.794511
+        ],
+        "type": "Point"
+      },
+      "id": "46da7eca5c14f56bdc12ccd1834186b3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "First Market Tower"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.399175,
+          37.790735
+        ],
+        "type": "Point"
+      },
+      "id": "55acd2d5efe921628c0de1014d7d0226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Building and Plaza"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.39787,
+          37.79299
+        ],
+        "type": "Point"
+      },
+      "id": "5883241a18724b3718c6dcc2e9b9c0ef"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Charles Schwab Building"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.39903,
+          37.79383
+        ],
+        "type": "Point"
+      },
+      "id": "67e548b791666573d2d5e38798e9ba12"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Trinity Alley"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.402583,
+          37.790306
+        ],
+        "type": "Point"
+      },
+      "id": "8df1c2a7ecdadb351f47ce406df72d4a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "One Front Street"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.398805,
+          37.791635
+        ],
+        "type": "Point"
+      },
+      "id": "97e5567866b47450232849f2dd2bad13"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Citigroup Center Atrium"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.401112,
+          37.790723
+        ],
+        "type": "Point"
+      },
+      "id": "b91e3c9a0abe6fb779ebc1885d88e692"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "California Street Plaza 2"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.403705,
+          37.79224
+        ],
+        "type": "Point"
+      },
+      "id": "b91f13e0ca5dfd744f74101dc1e83207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "One Bush Plaza"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.399951,
+          37.791208
+        ],
+        "type": "Point"
+      },
+      "id": "bd0cf19b2fe24500423062edd228bb66"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Crocker Galleria"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.403019,
+          37.789738
+        ],
+        "type": "Point"
+      },
+      "id": "c01d4a75ad372a9be6e4c3a931dd5cc5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Transamerica Pyramid Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.401836,
+          37.795335
+        ],
+        "type": "Point"
+      },
+      "id": "d56015c09c87699648ad142c143ada1b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "California Center Building"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.400274,
+          37.792661
+        ],
+        "type": "Point"
+      },
+      "id": "e06e0a670e03015637b739900278ddf9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Transamerica Redwood Park"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.402185,
+          37.795494
+        ],
+        "type": "Point"
+      },
+      "id": "e83ae8565e16147c1fbac55cb4b93a74"
+    }
+  ],
+  "type": "FeatureCollection"
+}
