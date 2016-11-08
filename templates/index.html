@@ -91,30 +91,26 @@
 	<!-- Mapbox View -->
 	<div class="container">
 		<div id='map' style='width: 600px; height: 500px;'></div>
-		<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
-		<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
-	<div id='map'></div>
 	<script>
 		L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
 	    var map = L.mapbox.map('map', 'mapbox.streets', {
-	        zoomControl: false,
 	        container: 'map',
 	        center: [37.793190, -122.399947], // starting position
 	        zoom: 16, // starting zoom
+	        scrollWheelZoom: false
 	    });
+
 	    // map stylesheet location
 	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse')
 	    	.addTo(map);
-	    L.geoJson(data, {
-			onEachFeature: function (feature, layer) {
-			layer.bindPopup(feature.properties.description);
-			}
-		}).addTo(map);
-	    // disable drag and zoom handlers
-		map.dragging.disable();
-		map.touchZoom.disable();
-		map.doubleClickZoom.disable();
-		map.scrollWheelZoom.disable();
+
+	    // Set a custom formatter for tooltips
+    // Provide a function that returns html to be used in tooltip
+    interaction.formatter(function(feature) {
+         var o = '<h2>' + feature.properties.Title + '</h2>';
+         return o;
+     });
+
 	</script>
 	</div>
 
