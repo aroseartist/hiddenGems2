@@ -97,18 +97,24 @@
 	<script>
 		L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
 	    var map = L.mapbox.map('map', 'mapbox.streets', {
+	        zoomControl: false,
 	        container: 'map',
 	        center: [37.793190, -122.399947], // starting position
 	        zoom: 16, // starting zoom
 	    });
-	    map.scrollZoom.disable(); // disable map zoom when using scroll
-	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse') //stylesheet location
+	    // map stylesheet location
+	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse')
 	    	.addTo(map);
 	    L.geoJson(data, {
 			onEachFeature: function (feature, layer) {
 			layer.bindPopup(feature.properties.description);
 			}
 		}).addTo(map);
+	    // disable drag and zoom handlers
+		map.dragging.disable();
+		map.touchZoom.disable();
+		map.doubleClickZoom.disable();
+		map.scrollWheelZoom.disable();
 	</script>
 	</div>
 
