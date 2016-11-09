@@ -61,7 +61,7 @@
 							<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
 							<div class="company_img_desc">{{ place.title }}</div>
 						</div>
-						<p hidden id="details">{{ place.description }}</p>
+						<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
 					{% endfor %}
 				</div>
 			</div>
@@ -72,7 +72,7 @@
     <script>
 
     	function showDetails(evt){
-    		$("p#details").show();
+    		$("p#details").toggle();
     	}
 
     	$("img#pic").on('click', showDetails);
