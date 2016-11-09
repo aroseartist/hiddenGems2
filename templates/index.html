@@ -16,6 +16,7 @@
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 	<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+	<script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
 
   </head>
   <body>
@@ -93,13 +94,24 @@
 	    // map stylesheet location
 	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse')
 	    	.addTo(map);
+	    var myLayer = L.mapbox.featureLayer().addTo(map);
+	    var geojsonLayer = new L.GeoJSON.AJAX("../data/features.geojson");       
+		geojsonLayer.addTo(map);
+
+        myLayer.setGeoJSON(geojsonLayer);
+		myLayer.on('mouseover', function(e) {
+		    e.layer.openPopup();
+		});
+		myLayer.on('mouseout', function(e) {
+		    e.layer.closePopup();
+		});
 
 	    // Set a custom formatter for tooltips
-    // Provide a function that returns html to be used in tooltip
-    interaction.formatter(function(feature) {
-         var o = '<h2>' + feature.properties.Title + '</h2>';
-         return o;
-     });
+	    // Provide a function that returns html to be used in tooltip
+	    interaction.formatter(function(feature) {
+	         var o = '<h2>' + feature.properties.Title + '</h2>';
+	         return o;
+	     });
 
 	</script>
 	</div>

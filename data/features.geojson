@@ -3,7 +3,10 @@
     {
       "type": "Feature",
       "properties": {
-        "Title": "Embarcadero Center West"
+        title: "Embarcadero Center West"
+        'marker-color': '#f86767',
+        'marker-size': 'large',
+        'marker-symbol': 'star',
       },
       "geometry": {
         "coordinates": [
