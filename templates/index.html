@@ -94,9 +94,9 @@
 	    // map stylesheet location
 	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse')
 	    	.addTo(map);
+	    
 	    var myLayer = L.mapbox.featureLayer().addTo(map);
 	    var geojsonLayer = new L.GeoJSON.AJAX("../data/features.geojson");       
-		geojsonLayer.addTo(map);
 
         myLayer.setGeoJSON(geojsonLayer);
 		myLayer.on('mouseover', function(e) {
