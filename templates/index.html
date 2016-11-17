@@ -55,15 +55,19 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<div class="col-md-12 company_content_img_all">
-					{% for place in places %}
-						<div class="company_img_block company_btn1">
-							<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
-							<div class="company_img_desc">{{ place.title }}</div>
-						</div>
-						<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
-					{% endfor %}
-				</div>
+				<form>
+					<div class="col-md-12 company_content_img_all" id="place_pic">
+						{% for place in places %}
+							<div class="company_img_block company_btn1">
+								<input id="placeId" type="hidden" name="clickPlace" value="{{ 
+								place.place_id }}">
+									<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
+									<div class="company_img_desc">{{ place.title }}</div>
+							</div>
+							<p class="col-md-9" hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
+						{% endfor %}
+					</div>
+				</form>
 			</div>
 		</div>
 		{% endif %}
@@ -71,11 +75,23 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
     <script>
 
-    	function showDetails(evt){
+    	function photoClicked(result) {
+    		console.log(result);
     		$("p#details").toggle();
     	}
 
-    	$("img#pic").on('click', showDetails);
+    	function showDetails(evt){
+    		// evt.preventDefault();
+    		var placeId = $("#placeId").val();
+    		var data = {"placeId: placeId"};
+    		console.log(placeId);
+    		console.log(data);
+    		$.post("/click_photo", data, photoClicked);
+    		// $("div#place_pic").removeClass('col-md-12');
+      //    $("div#place_pic").addClass('col-md-6');
+    	}
+
+    	$("form#placeId").on('click', showDetails);
 
     </script>
 
@@ -113,15 +129,15 @@
 					<div class="contact_right_details">
 						<div class="">
 							<i class="fa fa-map-marker text_color"></i> 
-							<span>4952 Woodland Drive, Sioux City, IA 51106</span>
+							<span>Oakland, CA</span>
 						</div>
 						<div class="">
 							<i class="fa fa-envelope text_color"></i> 
-							<span><a href="#" class="link_hoverw">support@yourwebsite.com</a></span>
+							<span><a href="#" class="link_hoverw">andrade.evlyn@gmail.com</a></span>
 						</div>
 						<div class="">
 							<i class="fa fa-globe text_color"></i> 
-							<span><a href="#" class="link_hoverw">www.website.com</a></span>
+							<span><a href="#" class="link_hoverw">https://www.linkedin.com/in/evlynandrade</a></span>
 						</div>
 					</div>
 					<div class="follow_us">
