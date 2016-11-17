@@ -55,18 +55,15 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<form>
-					<div class="col-md-12 company_content_img_all" id="place_pic">
+					<div class="col-md-12 company_content_img_all">
 						{% for place in places %}
 							<div class="company_img_block company_btn1">
-								<input type="image" src="{{ place.place_photo }}" class="img_border" 
-								type="submit" id="placeId" value="{{ place.place_id }}" />
-								<div class="company_img_desc">{{ place.title }}</div>
-							</div>
-							<p class="col-md-9" hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
+ 								<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
+ 								<div class="company_img_desc">{{ place.title }}</div>
+ 							</div>
+ 							<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
 						{% endfor %}
 					</div>
-				</form>
 			</div>
 		</div>
 		{% endif %}
@@ -74,21 +71,13 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
    <script>
 
-    	function photoClicked(result) {
-    		console.log(result);
-    		$("p#details").toggle();
-    	}
-
     	function showDetails(evt){
-    		evt.preventDefault();
-    		var placeId = $("#placeId").val();
-    		var data = {"placeId": placeId};
-    		$.post("/click_photo", data, photoClicked);
+    		$("p#details").toggle();
     		// $("div#place_pic").removeClass('col-md-12');
       //    $("div#place_pic").addClass('col-md-6');
     	}
 
-    	$("#placeId").on('click', showDetails);
+    	$("img#pic").on('click', showDetails);
 
     </script>
 
