@@ -1,16 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Trocchi);
+@import url(https://fonts.googleapis.com/css?family=Eczar);
 
 body {
     overflow:hidden;
 }
 body, a, blockquote{
-    font-family: 'Trocchi', cursive, sans-serif;
+    font-family: 'Eczar', cursive, sans-serif;
     font-weight: 400; 
     color: #333333;
     background: url(../img/body_bg.png);
 }
 p{
-    font-family: 'Trocchi', sans-serif;
+    font-family: 'Eczar', sans-serif;
     font-weight: 400; 
     color: #505050;
     font-size: 14px;
@@ -37,9 +37,12 @@ button{
     padding: 12px 22px;
     color: #333333;
 }
+#mapid { 
+    height: 180px;
+}
 .mapboxgl-popup {
     max-width: 400px;
-    font: 12px/20px 'Trocchi', sans-serif;
+    font: 12px/20px 'Eczar', sans-serif;
 }
 #pageloader {
     width: 100%;

@@ -12,11 +12,11 @@
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="/static/css/color_3.css" rel="stylesheet">
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-       
+
+    <!-- Mapbox -->
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 	<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
-	<script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
 
   </head>
   <body>
@@ -55,27 +55,40 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<div class="col-md-12 company_content_img_all">
-					{% for place in places %}
-						<div class="company_img_block company_btn1">
-							<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
-							<div class="company_img_desc">{{ place.title }}</div>
-						</div>
-						<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
-					{% endfor %}
-				</div>
+				<form>
+					<div class="col-md-12 company_content_img_all" id="place_pic">
+						{% for place in places %}
+							<div class="company_img_block company_btn1">
+								<input type="image" src="{{ place.place_photo }}" class="img_border" 
+								type="submit" id="placeId" value="{{ place.place_id }}" />
+								<div class="company_img_desc">{{ place.title }}</div>
+							</div>
+							<p class="col-md-9" hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
+						{% endfor %}
+					</div>
+				</form>
 			</div>
 		</div>
 		{% endif %}
 	</section>
 	<script src="https://code.jquery.com/jquery.js"></script>
-    <script>
+   <script>
 
-    	function showDetails(evt){
+    	function photoClicked(result) {
+    		console.log(result);
     		$("p#details").toggle();
     	}
 
-    	$("img#pic").on('click', showDetails);
+    	function showDetails(evt){
+    		evt.preventDefault();
+    		var placeId = $("#placeId").val();
+    		var data = {"placeId": placeId};
+    		$.post("/click_photo", data, photoClicked);
+    		// $("div#place_pic").removeClass('col-md-12');
+      //    $("div#place_pic").addClass('col-md-6');
+    	}
+
+    	$("#placeId").on('click', showDetails);
 
     </script>
 
@@ -84,115 +97,76 @@
 		<div id='map' style='width: 600px; height: 500px;'></div>
 	<script>
 		L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
-	    var map = L.mapbox.map('map', 'mapbox.streets', {
+	    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
 	        container: 'map',
-	        center: [37.793190, -122.399947], // starting position
-	        zoom: 16, // starting zoom
+	        // center: [37.793190, -122.399947], // starting position
+	        // zoom: 16, // starting zoom
 	        scrollWheelZoom: false
 	    });
-
-	    // map stylesheet location
-	    var styleLayer = L.mapbox.styleLayer('mapbox://styles/sf-treasure/cisxtca1w000d2ypiltketfse')
-	    	.addTo(map);
-	    
-	    var myLayer = L.mapbox.featureLayer().addTo(map);
-	    var geojsonLayer = new L.GeoJSON.AJAX("../data/features.geojson");       
-
-        myLayer.setGeoJSON(geojsonLayer);
-		myLayer.on('mouseover', function(e) {
-		    e.layer.openPopup();
-		});
-		myLayer.on('mouseout', function(e) {
-		    e.layer.closePopup();
-		});
-
-	    // Set a custom formatter for tooltips
-	    // Provide a function that returns html to be used in tooltip
-	    interaction.formatter(function(feature) {
-	         var o = '<h2>' + feature.properties.Title + '</h2>';
-	         return o;
-	     });
 
 	</script>
 	</div>
 
 
-	<!-- About Us Section -->
-	<section id="about" class="container">	
-		<div class="big_title">
-			<div class="big_title_txt montserrat_font">Discover the secret of Sertin template</div>
-			<div class="text_und_big_title">
-				We are an award winning creative agency based in Wisconsin with a passion for helping our clients grow.
-			</div>
-			<div class="big_title_txt_separ background_color"></div>
-		</div>
-		<div class="section_content">
-			<div class="about_content">
-				<img src="img/award.png" alt="award">
-			</div>
-		</div>
-	</section>
-	
-	
 	<!-- Contact Us Section -->	
 	<section id="contact" class="container">	
 		<div class="big_title">
 		</div>
 		<div class="section_content">
 			<div class="row">
-				<div class="col-md-5 contact_content_left">
+
+				<div class="col-md-6">
 					<div class="content_big_title">
-						Send us <span class="text_color">a message</span>
+						<span class="text_color">Evlyn</span> Andrade
 					</div>
 					<div class="contact_small_text">
 						Lorem ipsum dolor sit consectetur adipisicing elit eiusmod tempor incididunt.
 					</div>
-					<form name="contact_form" method="post" action="" class="contact_form">
-						<div class="row">
-							<div class="col-md-6">
-								<input type="text" class="conact_form_name" name="name" id="name" placeholder="Name" required/>
-							</div>
-							<div class="col-md-6">
-								<input type="email" class="conact_form_email" name="email" id="email" placeholder="Email" required/>
-							</div>
+					<p>Lorem ipsum dolor sit amet, consectetur minim veniam adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna das martou lokra walla loula elli yji soktras aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod</p>
+					<div class="contact_right_details">
+						<div class="">
+							<i class="fa fa-map-marker text_color"></i> 
+							<span>Oakland, CA</span>
 						</div>
-						<div class="contact_form_message_block">
-							<textarea name="message" id="message" placeholder="Message" class="contact_form_message" required></textarea>
+						<div class="">
+							<i class="fa fa-envelope text_color"></i> 
+							<span><a href="#" class="link_hoverw">andrade.evlyn@gmail.com</a></span>
 						</div>
-						<div class="contact_form_btn_block">
-							<input type="submit" value="Send" class="contact_form_bnt  contact_btn"/>
-							<input type="reset" value="Reset" class="contact_form_bnt "/>
+						<div class="">
+							<i class="fa fa-globe text_color"></i> 
+							<span><a href="#" class="link_hoverw">https://www.linkedin.com/in/evlynandrade</a></span>
 						</div>
-					</form>
-				</div>
-				<div class="col-md-6 col-md-offset-6">
+					</div>
+					<div class="follow_us">
+						<a href="" class="follow_us_btn "><i class="fa fa-facebook"></i> </a>
+						<a href="" class="follow_us_btn "><i class="fa fa-twitter"></i> </a>
+						<a href="" class="follow_us_btn "><i class="fa fa-google-plus"></i> </a>
+						<a href="" class="follow_us_btn "><i class="fa fa-rss"></i> </a>
+					</div>
+				</div>	
+				
+				<div class="col-md-6">
 					<div class="content_big_title">
-						Get in <span class="text_color">touch</span>
+
+						Lora <span class="text_color">"Ro"</span> Rose
 					</div>
 					<div class="contact_small_text">
-						You can also contact us at
+					Lorem ipsum dolor sit consectetur adipisicing elit eiusmod tempor incididunt.
+					<p>Lorem ipsum dolor sit amet, consectetur minim veniam adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna das martou lokra walla loula elli yji soktras aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod</p>
 					</div>
 					<div class="contact_right_details">
 						<div class="">
 							<i class="fa fa-map-marker text_color"></i> 
-							<span>4952 Woodland Drive, Sioux City, IA 51106</span>
-						</div>
-						<div class="">
-							<i class="fa fa-phone text_color"></i> 
-							<span>712-274-6481</span>
+							<span>Oakland, CA</span>
 						</div>
 						<div class="">
 							<i class="fa fa-envelope text_color"></i> 
-							<span><a href="#" class="link_hoverw">support@yourwebsite.com</a></span>
+							<span><a href="#" class="link_hoverw">aroseartist@gmail.com</a></span>
 						</div>
 						<div class="">
 							<i class="fa fa-globe text_color"></i> 
-							<span><a href="#" class="link_hoverw">www.website.com</a></span>
+							<span><a href="#" class="link_hoverw">www.aroseartist.com</a></span>
 						</div>
-					</div>
-					
-					<div class="content_big_title">
-						Follow <span class="text_color">Us</span>
 					</div>
 					<div class="follow_us">
 						<a href="" class="follow_us_btn "><i class="fa fa-facebook"></i> </a>
@@ -212,14 +186,7 @@
 	<footer>
 		<div class="footer4">
 			<div class="container text-center">
-				<img src="img/footer4_logo.png" alt="SERTIN">
 				<p>Lorem ipsum dolor sit amet, consectetur minim veniam adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna das martou lokra walla loula elli yji soktras aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod</p>
-				<div class="contact2_social text-center">
-					<a href="" class="footer4_social_btn link_hoverb"><i class="fa fa-facebook"></i> - facebook</a>
-					<a href="" class="footer4_social_btn link_hoverb"><i class="fa fa-twitter"></i> - twitter</a>
-					<a href="" class="footer4_social_btn link_hoverb"><i class="fa fa-google-plus"></i> - google+</a>
-					<a href="" class="footer4_social_btn link_hoverb"><i class="fa fa-rss"></i> - rss feeds</a>
-				</div>
 			</div>
 		</div>
 	</footer>

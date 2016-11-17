@@ -33,6 +33,25 @@ def index():
 
     return render_template("index.html", places=places)
 
+@app.route('/click_photo', methods=['POST'])
+def location_details():
+    """Allow user to get details of locations"""
+    
+    # get the place id from the form
+    place_id = request.form['placeId']
+    # query the database for the details of the location
+    place = Place.query.filter(Place.place_id == place_id)
+                               # (Place.description == description,
+                               # Place.address == address, 
+                               # Place.neighborhood == neighborhood,
+                               # Place.hours == hours,
+                               # Place.features == features,
+                               # Place.wifi == wifi,
+                               # Place.restroom == restroom,
+                               # Place.seating == seating,
+                               # Place.wheelchair_accessible == wheelchair_accessible,
+                               # Place.indoor_outdoor == indoor_outdoor)
+    return place 
 
 ################### Helper Functions #######################
 
