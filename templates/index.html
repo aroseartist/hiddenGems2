@@ -55,21 +55,13 @@
 		</div>
 		<div class="section_content">
 			<div class="row">
-					<div class="col-md-12 company_content_img_all">
+					<div class="col-md-12 company_content_img_all" id="place_pic">
 						{% for place in places %}
-						<div class="container">
-							<div class="row">
-								<div class="col-md-3" id="place_pic">
-									<div class="company_img_block company_btn1">
-		 								<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
-		 								<div class="company_img_desc">{{ place.title }}</div>
-		 							</div>
-	 							</div>
-	 							<div class="col-md-6">
-		 							<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
-	 							</div>
+							<div class="company_img_block company_btn1">
+ 								<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
+ 								<div class="company_img_desc">{{ place.title }}</div>
  							</div>
-						</div>
+ 							<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
 						{% endfor %}
 					</div>
 			</div>
