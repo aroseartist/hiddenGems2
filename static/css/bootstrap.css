@@ -632,3 +632,7 @@ p {
 #place_pic {
   padding-top: 10px;
 }
+
+strong, b {
+    font-weight: 900;
+}
