@@ -44,24 +44,19 @@
 	</div>
 
 	<!-- Places Section -->
-	<section id="company" class="container">
+	<section id="contact" class="container">
 		{% if places %}
-		<div class="big_title">
-			<div class="big_title_txt montserrat_font">What they said about us</div>
-			<div class="text_und_big_title">
-				We are an award winning creative agency based in Wisconsin with a passion for helping our clients grow.
-			</div>
-			<div class="big_title_txt_separ background_color"></div>
-		</div>
 		<div class="section_content">
 			<div class="row">
-					<div class="col-md-12 company_content_img_all" id="place_pic">
+					<div class="col-md-6" id="place_pic">
 						{% for place in places %}
 							<div class="company_img_block company_btn1">
  								<img src="{{ place.place_photo }}" class="img_border" type="button" id="pic">
  								<div class="company_img_desc">{{ place.title }}</div>
  							</div>
- 							<p hidden id="details">Description: {{ place.description }}<br/>Address: {{ place.address }}<br/>Neighborhood: {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/>Wifi: {{ place.wifi }}<br/>Restroom: {{ place.restroom }}<br/>Seating: {{ place.seating }}<br/>Wheelchair Accessible: {{ place.wheelchair_accessible }}<br/>Indoor or Outdoor: {{ place.indoor_outdoor }}<br/></p>
+ 					</div>
+ 					<div class="col-md-6" id="place_pic">
+ 							<p hidden id="details"><strong>Description:</strong> {{ place.description }}<br/><strong>Address:</strong> {{ place.address }}<br/><strong>Neighborhood:</strong> {{ place.neighborhood }}<br/>Hours: {{ place.hours }}<br/>Features: {{ place.features }}<br/><strong>Wifi:</strong> {{ place.wifi }}<br/><strong>Restroom:</strong> {{ place.restroom }}<br/><strong>Seating:</strong> {{ place.seating }}<br/><strong>Wheelchair Accessible:</strong> {{ place.wheelchair_accessible }}<br/><strong>Indoor or Outdoor:</strong> {{ place.indoor_outdoor }}<br/></p>
 						{% endfor %}
 					</div>
 			</div>
@@ -87,21 +82,12 @@
 		<div id='map' style='width: 600px; height: 500px;'></div>
 	<script>
 		L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
-	    var map = L.mapbox.map('map', 'mapbox.light', { 
-	    	scrollWheelZoom: false
-			}).setView([37.793190, -122.399947], 15);
-
-
-	    var featureLayer = L.mapbox.featureLayer()
-	    .addTo(map);
-		featureLayer.loadURL('../data/features.geojson');
-
-	 //    var myLayer = L.mapbox.featureLayer('mapbox.dc-markers').addTo(map);
-		// myLayer.on('layeradd', function(e) {
-		//   var popupContent = '<strong>' + e.layer.feature.properties.title + '</strong> <br />This map created with <a href="https://mapbox.com">Mapbox</a>!';
-		//   e.layer.bindPopup(popupContent);
-		// });
-
+	    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
+	        container: 'map',
+	        // center: [37.793190, -122.399947], // starting position
+	        // zoom: 16, // starting zoom
+	        scrollWheelZoom: false
+	    });
 	</script>
 	</div>
 

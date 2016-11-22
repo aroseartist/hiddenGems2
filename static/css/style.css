@@ -37,6 +37,9 @@ button{
     padding: 12px 22px;
     color: #333333;
 }
+#details {
+    text-align: left;
+}
 #mapid { 
     height: 180px;
 }
@@ -63,6 +66,7 @@ button{
 .loader {
   margin: 6em auto;
   font-size: 5px;
+  color: #f1ad1d;
   position: relative;
   text-indent: -9999em;
   border-top: 1.1em solid #333333;
