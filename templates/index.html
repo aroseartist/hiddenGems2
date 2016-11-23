@@ -7,11 +7,12 @@
     <title>Hidden Gems</title>
 
     <!-- CSS Files --> 
-    <link href="/static/css/reset.css" rel="stylesheet">
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/color_3.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/css/color_3.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/css/jquery.bxslider.css" rel="stylesheet">
 
     <!-- Mapbox -->
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -25,7 +26,7 @@
 	<!-- Loader page -->
 	<div id="pageloader">   
 	    <div class="loader-item text-center">
-	        <div class="loader">Loading...</div>
+	        <div class="loader"></div>
 	    </div>
 	</div>
 
@@ -39,7 +40,6 @@
 			
 		<div class="container main">
 			<div class="fullbg_bigtxt">HIDDEN GEMS</div>
-			<div class="fullbg_smalltxt">Publicly Owned Spaces<br>Merely Privately Operated</div>
 		</div>	
 	</div>
 
@@ -47,9 +47,9 @@
 	<section id="company" class="container">
 		{% if places %}
 		<div class="big_title">
-			<div class="big_title_txt montserrat_font">What they said about us</div>
+			<div class="big_title_txt montserrat_font">Privately-Owned Public Open Spaces</div>
 			<div class="text_und_big_title">
-				We are an award winning creative agency based in Wisconsin with a passion for helping our clients grow.
+				<p>Privately-owned public open spaces (POPOS) are publicly accessible spaces in forms of plazas, terraces, atriums, small parks, and even snippets which are provided and maintained by private developers. In San Francisco, POPOS mostly appear in the Downtown office district area. Prior to 1985, developers provided POPOS under three general circumstances: voluntarily, in exchange for a density bonus, or as a condition of approval. The 1985 Downtown Plan created the first systemic requirements for developers to provide publicly accessible open space as a part of projects in C-3 Districts. The goal was to “provide in the downtown quality open space in sufficient quantity and variety to meet the needs of downtown workers, residents and visitors.” (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_138" target="_blank">See Planning Code Section 138 for regulations</a>).&nbsp;Since then, project sponsors for residential projects may provide POPOS instead of their required open spaces in the Downtown Residential (DTR) and Eastern Neighborhoods (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_135" target="_blank">Section 135 of the Planning Code</a>).</p>
 			</div>
 			<div class="big_title_txt_separ background_color"></div>
 		</div>
@@ -74,32 +74,35 @@
 		</div>
 		{% endif %}
 	</section>
-	<script src="https://code.jquery.com/jquery.js"></script>
-   <script>
 
-    	function showDetails(evt){
-    		$("div#details").toggle();
-    		$("div#place_pic").toggleClass('col-md-6')
-    	}
+	<!-- Map Section -->
 
-    	$("img#pic").on('click', showDetails);
+	<section class="container center" id="map_container">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<div class="big_title_txt_separ background_color"></div>
 
-    </script>
+		<script>
+	    	function showDetails(evt){
+	    		$("div#details").toggle();
+	    		$("div#place_pic").toggleClass('col-md-6')
+	    	}
+	    	$("img#pic").on('click', showDetails);
+	    </script>
 
-	<!-- Mapbox View -->
-	<div class="container center">
-		<div id='map' style='width: 600px; height: 500px;'></div>
-	<script>
-		L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
-	    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
-	        container: 'map',
-	        // center: [37.793190, -122.399947], // starting position
-	        // zoom: 16, // starting zoom
-	        scrollWheelZoom: false
-	    });
-
-	</script>
-	</div>
+		<!-- Mapbox View -->
+		<div class="container center">
+			<div id='map' style='width: 600px; height: 500px;'></div>
+			<script>
+				L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
+			    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
+			        container: 'map',
+			        // center: [37.793190, -122.399947], // starting position
+			        // zoom: 16, // starting zoom
+			        scrollWheelZoom: false
+			    });
+			</script>
+		</div>
+	</section>
 
 
 	<!-- Contact Us Section -->	
@@ -121,18 +124,18 @@
 						</div>
 						<div class="">
 							<i class="fa fa-envelope text_color"></i> 
-							<span><a href="#" class="link_hoverw">andrade.evlyn@gmail.com</a></span>
+							<span><a href="mailto:andrade.evlyn@gmail.com" class="link_hoverw" target="_top">andrade.evlyn@gmail.com</a></span>
 						</div>
 						<div class="">
 							<i class="fa fa-globe text_color"></i> 
-							<span><a href="#" class="link_hoverw">https://www.linkedin.com/in/evlynandrade</a></span>
+							<span><a href="https://www.linkedin.com/in/evlynandrade" class="link_hoverw" target="_blank">https://www.linkedin.com/in/evlynandrade</a></span>
 						</div>
 					</div>
 					<div class="follow_us">
-						<a href="" class="follow_us_btn "><i class="fa fa-facebook"></i> </a>
-						<a href="" class="follow_us_btn "><i class="fa fa-twitter"></i> </a>
-						<a href="" class="follow_us_btn "><i class="fa fa-google-plus"></i> </a>
-						<a href="" class="follow_us_btn "><i class="fa fa-rss"></i> </a>
+						<a href="" class="follow_us_btn " target="_blank"><i class="fa fa-facebook"></i> </a>
+						<a href="" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
+						<a href="" class="follow_us_btn " target="_blank"><i class="fa fa-google-plus"></i> </a>
+						<a href="" class="follow_us_btn " target="_blank"><i class="fa fa-rss"></i> </a>
 					</div>
 				</div>	
 				
@@ -152,18 +155,18 @@
 						</div>
 						<div class="">
 							<i class="fa fa-envelope text_color"></i> 
-							<span><a href="#" class="link_hoverw">aroseartist@gmail.com</a></span>
+							<span><a href="mailto:aroseartist@gmail.com" class="link_hoverw" target="_top">aroseartist@gmail.com</a></span>
 						</div>
 						<div class="">
 							<i class="fa fa-globe text_color"></i> 
-							<span><a href="#" class="link_hoverw">www.aroseartist.com</a></span>
+							<span><a href="http://www.aroseartist.com" class="link_hoverw" target="_blank">www.aroseartist.com</a></span>
 						</div>
 					</div>
 					<div class="follow_us">
-						<a href="https://www.linkedin.com/in/aroseartist" class="follow_us_btn "><i class="fa fa-linkedin"></i> </a>
-						<a href="http://www.twitter.com/aroseartist" class="follow_us_btn "><i class="fa fa-twitter"></i> </a>
-						<a href="http://www.aroseartist.com/blog" class="follow_us_btn "><i class="fa fa-rss"></i> </a>
-						<a href="https://github.com/aroseartist" class="follow_us_btn "><i class="fa fa-github"></i> </a>
+						<a href="https://www.linkedin.com/in/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-linkedin"></i> </a>
+						<a href="http://www.twitter.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
+						<a href="https://github.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-github"></i> </a>
+						<a href="http://www.aroseartist.com/blog" class="follow_us_btn " target="_blank"><i class="fa fa-rss"></i> </a>
 					</div>
 				
 				</div>
@@ -203,15 +206,9 @@
 	
 	<!-- WoW animation -->
 	<script src="/static/js/wow.min.js"></script>
-
+	
 	<!-- Superslides - v0.6.2 - 2013-07-10 -->
 	<script src="/static/js/jquery.superslides.min.js"></script>
-	
-	<!-- FitVids 1.1 -->
-	<script src="/static/js/jquery.fitvids.js"></script>
-	
-	<!-- jQuery OwlCarousel v1.3.2 -->
-	<script src="/static/js/owl.carousel.min.js"></script>
 	
 	<!-- jPlayer 2.6.0 -->
 	<script src="/static/js/jquery.jplayer.min.js"></script>
@@ -222,15 +219,9 @@
 	<!-- jQuery countTo Plugin -->
 	<script src="/static/js/jquery.countTo.js"></script>
 	
-	<!-- jQuery Pretty Photo -->
-	<script src="/static/js/jquery.prettyPhoto.js"></script>
-	
 	<!-- Sticky -->
 	<script src="/static/js/jquery.sticky.js"></script>
-	
-	<!-- Twitter Feeds -->
-	<script src="/static/js/jquery.tweet.js"></script>
-	
+
 	<!-- Nice Scroll -->
 	<script src="/static/js/jquery.nicescroll.js"></script>
 	
@@ -242,16 +233,6 @@
 	
 	<!-- One Page Nav -->
 	<script src="/static/js/jquery.nav.js"></script>
-
-	<!-- Easy Pie Chart -->
-	<script src="/static/js/jquery.easy-pie-chart.js"></script>
-	
-	<!-- GMAP3 Plugin for JQuery -->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-	<script src="/static/js/gmap3.min.js"></script>
-
-	<!-- jQuery code for Masonry Blog -->
-	<script src="/static/js/script_masonryb.js"></script>
 	
 	<!-- jQuery code for plugins -->
     <script src="/static/js/script.js"></script>
