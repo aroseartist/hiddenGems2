@@ -7,7 +7,6 @@ body, a, blockquote{
     font-family: 'Eczar', cursive, sans-serif;
     font-weight: 400; 
     color: #333333;
-    background: url(../img/body_bg.png);
 }
 p{
     font-family: 'Eczar', sans-serif;
@@ -39,6 +38,9 @@ button{
 }
 #mapid { 
     height: 180px;
+}
+.map {
+    position: relative;
 }
 .mapboxgl-popup {
     max-width: 400px;
@@ -98,10 +100,25 @@ button{
     transform: rotate(360deg);
   }
 }
+
+/* Super Slides background */
+
 #home {
     width:100%;
     height:auto;
     position:relative;  
+}
+#slides_background {
+    position: relative;
+    background-color:black;
+}
+#slides_background .slides-container {
+    display: none;
+}
+#slides_background .slides-container  div,
+#slides_background .slides-container  img{
+    width:100%;
+    height:100%;
 }
 #slides_background_home {
     position: relative;
@@ -115,11 +132,26 @@ button{
     width:100%;
     height:100%;
 }
-/* Change the picture of the home background here */
 #slides_background_home .slides-container .img0{
     background:url(../img/bg24.jpg) center fixed ;
 }
+/* Super Slide text inside */
+.homesliders .bx-wrapper .bx-viewport{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0px;
+    background: transparent;
+}
+.homesliders .fullbg_bigtxt{
+    margin-top: 0px;
+}
+.homesliders .logo{
+    margin-bottom: 40px;
+}
+
 /* Content Fixed Full Background */
+
 .main{
     position:absolute;
     width:100%;
@@ -186,6 +218,7 @@ button{
 .text_und_big_title{
     font-size: 17px;
     color: #4d4943;
+    text-align: justify;
 }
 .section_content{
     margin-top: 15px;
@@ -277,81 +310,10 @@ button{
 }
 .img_border{
     border: solid 1px #333333;
-}   
-.contact_form{
-    margin-top: 20px;
-}
-.contact_form_name, .contact_form_email{
-    width: 100%;
-    padding: 10px;
-    border: solid 1px #929292;
-    color: #525252;
-    font-size: 14px;
-    font-style: italic;
-}
-.contact_form_name::-webkit-input-placeholder {
-    color: #525252;
-}
-.contact_form_name:-moz-placeholder { /* Firefox 18- */
-    color: #525252;  
-}
-.contact_form_name::-moz-placeholder {  /* Firefox 19+ */
-    color: #525252;  
-}
-.contact_form_name:-ms-input-placeholder {  
-    color: #525252;  
-}
-.contact_form_email::-webkit-input-placeholder {
-    color: #525252;
-}
-.contact_form_email:-moz-placeholder { /* Firefox 18- */
-    color: #525252;  
-}
-.contact_form_email::-moz-placeholder {  /* Firefox 19+ */
-    color: #525252;  
-}
-.contact_form_email:-ms-input-placeholder {  
-    color: #525252;  
-}
-.contact_form_message_block{
-    margin-top: 20px;
-}
-.contact_form_message{
-    width: 100%;
-    padding: 10px;
-    border: solid 1px #929292;
-    color: #525252;
-    font-size: 14px;
-    font-style: italic;
-    height: 180px;
-}
-.contact_form_message::-webkit-input-placeholder {
-    color: #525252;
-}
-.contact_form_message:-moz-placeholder { /* Firefox 18- */
-    color: #525252;  
-}
-.contact_form_message::-moz-placeholder {  /* Firefox 19+ */
-    color: #525252;  
-}
-.contact_form_message:-ms-input-placeholder {  
-    color: #525252;
-    height: 180px;
-}
-.contact_form_bnt{
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    padding: 12px 40px;
-    margin-right: 15px;
-    text-transform: uppercase;
-}
-.contact_form_btn_block{
-    margin-top: 20px;
-}
-.contact_message{
-    font-size: 30px;
-}
+} 
+
+/* Contact Section */
+
 .contact_right_details{
     margin-top: 20px;
     margin-bottom: 35px;
@@ -378,6 +340,7 @@ button{
     color: white;
     background-image: none;
 }
+
 .footer{
     text-align: center;
     color: #000000;
