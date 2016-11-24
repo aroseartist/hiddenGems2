@@ -75,35 +75,30 @@
 		{% endif %}
 	</section>
 
-	<!-- Map Section -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<div class="big_title_txt_separ background_color"></div>
+	<p></p>
+	<script>
+    	function showDetails(evt){
+    		$("div#details").toggle();
+    		$("div#place_pic").toggleClass('col-md-6')
+    	}
+    	$("img#pic").on('click', showDetails);
+    </script>
 
-	<section class="map">
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<div class="big_title_txt_separ background_color"></div>
-		<p></p>
+	<!-- Mapbox View -->
+	<div class="container center">
+		<div id='map' style='width: 900px; height: 500px;'></div>
 		<script>
-	    	function showDetails(evt){
-	    		$("div#details").toggle();
-	    		$("div#place_pic").toggleClass('col-md-6')
-	    	}
-	    	$("img#pic").on('click', showDetails);
-	    </script>
-
-		<!-- Mapbox View -->
-		<div class="container center">
-			<div id='map' style='width: 900px; height: 500px;'></div>
-			<script>
-				L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
-			    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
-			        container: 'map',
-			        // center: [37.793190, -122.399947], // starting position
-			        // zoom: 16, // starting zoom
-			        scrollWheelZoom: false
-			    });
-			</script>
-		</div>
-	</section>
-
+			L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
+		    var map = L.mapbox.map('map', 'sf-treasure.250m2fap', { 
+		        container: 'map',
+		        // center: [37.793190, -122.399947], // starting position
+		        // zoom: 16, // starting zoom
+		        scrollWheelZoom: false
+		    });
+		</script>
+	</div>
 
 	<!-- Contact Us Section -->	
 	<section id="contact" class="container">	
