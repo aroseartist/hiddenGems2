@@ -41,7 +41,11 @@ button{
     text-align: left;
 }
 /* Map */
+
 #mapid { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position:absolute;
     top:0;
     bottom:0;
@@ -169,7 +173,9 @@ button{
 .big_title_txt_separ{
     width: 60px;
     height: 3px;
-    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -196,6 +202,9 @@ button{
 }
 .text_und_big_title{
     font-size: 17px;
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
     color: #4d4943;
 }
 .section_content{
@@ -357,6 +366,9 @@ button{
     font-size: 14;
     color: #505050;
 }
+.contact_desc {
+    text-align: justify;
+}
 .contact2_social_btn{
     color: #333333;
     border: solid 1px #333333;
@@ -367,8 +379,12 @@ button{
 .contact2_social{
     margin-top: 45px;
 }
+#contact_small_text {
+    text-align: justify;
+}
+/* Footer */
 .footer4{
-    padding: 80px 0;
+    padding: 10px 0;
     background-color: #333333;
     color: white;
     font-size: 14px;
@@ -377,14 +393,10 @@ button{
     color: white;
     width: 615px;
     margin: 45px auto; 
-    font-size: 12px
-}
-.footer4_social_btn{
-    color: white;
-    border: solid 1px white;
-    padding: 10px 25px;
-    margin: 5px 8px;
-    display: inline-block;
+    font-size: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .section_content .nav-tabs>li.active>a{
     border-bottom-color: transparent;
