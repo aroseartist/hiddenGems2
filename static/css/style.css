@@ -7,7 +7,6 @@ body, a, blockquote{
     font-family: 'Eczar', cursive, sans-serif;
     font-weight: 400; 
     color: #333333;
-    background: url(../img/body_bg.png);
 }
 p{
     font-family: 'Eczar', sans-serif;
@@ -295,7 +294,7 @@ button{
 .company_btn{
     margin-top: 59px;
 }
-.img_border{
+img.popos_img {
     border: solid 1px #333333;
 }
 .contact_message{
