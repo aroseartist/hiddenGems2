@@ -36,26 +36,26 @@ button{
     padding: 12px 22px;
     color: #333333;
 }
-
+#details {
+    text-align: left;
+}
 /* Map */
 
 #mapid { 
-    height: 180px;
-}
-#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+    top:0;
+    bottom:0;
     width:100%;
-    height:auto;
-    display: inline-block;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    height: 180px;
 }
 .mapboxgl-popup {
     max-width: 400px;
     font: 12px/20px 'Eczar', sans-serif;
 }
-
-/* Page loader */
-
+/* Loader */
 #pageloader {
     width: 100%;
     height: 100%;
@@ -75,6 +75,7 @@ button{
 .loader {
   margin: 6em auto;
   font-size: 5px;
+  color: #f1ad1d;
   position: relative;
   text-indent: -9999em;
   border-top: 1.1em solid #333333;
@@ -110,25 +111,10 @@ button{
     transform: rotate(360deg);
   }
 }
-
-/* Super Slides background */
-
 #home {
     width:100%;
     height:auto;
     position:relative;  
-}
-#slides_background {
-    position: relative;
-    background-color:black;
-}
-#slides_background .slides-container {
-    display: none;
-}
-#slides_background .slides-container  div,
-#slides_background .slides-container  img{
-    width:100%;
-    height:100%;
 }
 #slides_background_home {
     position: relative;
@@ -142,26 +128,11 @@ button{
     width:100%;
     height:100%;
 }
+/* Change the picture of the home background here */
 #slides_background_home .slides-container .img0{
     background:url(../img/bg24.jpg) center fixed ;
 }
-/* Super Slide text inside */
-.homesliders .bx-wrapper .bx-viewport{
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 0px;
-    background: transparent;
-}
-.homesliders .fullbg_bigtxt{
-    margin-top: 0px;
-}
-.homesliders .logo{
-    margin-bottom: 40px;
-}
-
 /* Content Fixed Full Background */
-
 .main{
     position:absolute;
     width:100%;
@@ -176,7 +147,7 @@ button{
 .fullbg_bigtxt{
     text-transform: uppercase;
     color: white;
-    font-size: 78px;
+    font-size: 48px;
     margin-top: 30px;
     font-weight: 700;
 }
@@ -199,17 +170,19 @@ button{
     margin-bottom: 35px;
 }
 .big_title_txt_separ{
-    width: 70px;
+    width: 60px;
     height: 3px;
-    display: inline-block;
-    margin-top: 35px;
-    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .big_title_txt_separ_bg{
     width: 60px;
     height: 3px;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .big_title .fa_title{
     background-color: #333333;
@@ -228,8 +201,10 @@ button{
 }
 .text_und_big_title{
     font-size: 17px;
-    color: #4d4943;
     text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #4d4943;
 }
 .section_content{
     margin-top: 15px;
@@ -319,12 +294,12 @@ button{
 .company_btn{
     margin-top: 59px;
 }
-.img_border{
+img.popos_img {
     border: solid 1px #333333;
-} 
-
-/* Contact Section */
-
+}
+.contact_message{
+    font-size: 30px;
+}
 .contact_right_details{
     margin-top: 20px;
     margin-bottom: 35px;
@@ -351,9 +326,6 @@ button{
     color: white;
     background-image: none;
 }
-
-/* Footer */
-
 .footer{
     text-align: center;
     color: #000000;
@@ -393,6 +365,9 @@ button{
     font-size: 14;
     color: #505050;
 }
+.contact_desc {
+    text-align: justify;
+}
 .contact2_social_btn{
     color: #333333;
     border: solid 1px #333333;
@@ -403,8 +378,12 @@ button{
 .contact2_social{
     margin-top: 45px;
 }
+#contact_small_text {
+    text-align: justify;
+}
+/* Footer */
 .footer4{
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #333333;
     color: white;
     font-size: 14px;
@@ -413,14 +392,10 @@ button{
     color: white;
     width: 615px;
     margin: 45px auto; 
-    font-size: 12px
-}
-.footer4_social_btn{
-    color: white;
-    border: solid 1px white;
-    padding: 10px 25px;
-    margin: 5px 8px;
-    display: inline-block;
+    font-size: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .section_content .nav-tabs>li.active>a{
     border-bottom-color: transparent;
@@ -438,9 +413,6 @@ button{
     from {background-position: 0px 0px;}
     to {background-position: 9600px 0px;}
 }
-
-/* Responsiveness */
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
     .company_content_img_all{
@@ -468,14 +440,6 @@ button{
 @media only screen and (max-width : 992px) {
     .big_title_txt_bg{
         position: initial;
-    }
-    .testimonials_content_author {
-        display: inline-block;
-        clear: both;
-        margin-bottom: 45px;
-    }
-    .contact_form_name{
-        margin-bottom: 20px
     }
     .contact_content_left{
         margin-bottom: 35px;
@@ -544,8 +508,5 @@ button{
 @media only screen and (max-width : 320px) {
 	#contact .content_big_title{
 		padding: 12px 30px 12px 15px;
-	}
-	.contact_form_btn {
-		padding: 12px 35px;
 	}
 }
