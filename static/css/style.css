@@ -39,8 +39,8 @@ button{
 #details {
     text-align: left;
 }
-/* Map */
 
+/* Map */
 #mapid { 
     display: block;
     margin-left: auto;
@@ -55,6 +55,7 @@ button{
     max-width: 400px;
     font: 12px/20px 'Eczar', sans-serif;
 }
+
 /* Loader */
 #pageloader {
     width: 100%;
@@ -111,6 +112,7 @@ button{
     transform: rotate(360deg);
   }
 }
+
 #home {
     width:100%;
     height:auto;
@@ -177,27 +179,6 @@ button{
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-.big_title_txt_separ_bg{
-    width: 60px;
-    height: 3px;
-    display: inline-block;
-    margin-top: 30px;
-}
-.big_title .fa_title{
-    background-color: #333333;
-    font-size: 60px;
-    font-weight: 700;
-    border: solid 1px #333333;
-    display: inline-block;
-    line-height: 86px;
-    padding: 0 22px;
-    margin: 14px 0;
-}
-.big_title .fa_title .fa{
-    font-size: 48px;
-    position: relative;
-    top: -5px;
 }
 .text_und_big_title{
     font-size: 17px;
@@ -291,47 +272,15 @@ button{
     background: #333333;
     text-decoration: none;
 }
+.section_content .nav-tabs>li.active>a{
+    border-bottom-color: transparent;
+    background-color: white;
+}
 .company_btn{
     margin-top: 59px;
 }
 img.popos_img {
     border: solid 1px #333333;
-}
-.contact_message{
-    font-size: 30px;
-}
-.contact_right_details{
-    margin-top: 20px;
-    margin-bottom: 35px;
-}
-.contact_right_details span{
-    margin-left: 5px;
-}
-.contact_right_details .fa{
-    background-color: #333333;
-    padding: 8px 0px 0px 0px;
-    width: 34px;
-    height: 30px;
-    margin: 4px 0px;
-    text-align: center;
-}
-.follow_us_btn{
-    font-size: 18px;
-    width: 46px;
-    height: 40px;
-    margin-right: 15px;
-    display: inline-block;
-    text-align: center;
-    padding-top: 7px;
-    color: white;
-    background-image: none;
-}
-.footer{
-    text-align: center;
-    color: #000000;
-    font-size: 14px;
-    padding: 35px 0px;
-    border-top: solid 1px #333333;
 }
 #simple_txt_background{
     background: url(../img/bg1.jpg) no-repeat 0 0 fixed;
@@ -365,6 +314,26 @@ img.popos_img {
     font-size: 14;
     color: #505050;
 }
+
+/* Contact */
+.contact_message{
+    font-size: 30px;
+}
+.contact_right_details{
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.contact_right_details span{
+    margin-left: 5px;
+}
+.contact_right_details .fa{
+    background-color: #333333;
+    padding: 8px 0px 0px 0px;
+    width: 34px;
+    height: 30px;
+    margin: 4px 0px;
+    text-align: center;
+}
 .contact_desc {
     text-align: justify;
 }
@@ -381,7 +350,26 @@ img.popos_img {
 #contact_small_text {
     text-align: justify;
 }
+.follow_us_btn{
+    font-size: 18px;
+    width: 46px;
+    height: 40px;
+    margin-right: 15px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    color: white;
+    background-image: none;
+}
+
 /* Footer */
+.footer{
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    padding: 35px 0px;
+    border-top: solid 1px #333333;
+}
 .footer4{
     padding: 10px 0;
     background-color: #333333;
@@ -396,117 +384,4 @@ img.popos_img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-.section_content .nav-tabs>li.active>a{
-    border-bottom-color: transparent;
-    background-color: white;
-}
-@-webkit-keyframes BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-@-moz-keyframes  BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-@-ms-keyframes  BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-    .company_content_img_all{
-        float: initial;
-        width: 570px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .company_content_parag_all{
-        float: inherit;
-        width: 570px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 0 auto;
-        height: 340px;
-    }
-}
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-    .big_title_txt_bg{
-        position: initial;
-    }
-    .contact_content_left{
-        margin-bottom: 35px;
-    }
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    .company_content_img_all{
-        float: initial;
-        width: 450px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .company_content_parag_all{
-        float: inherit;
-        width: 450px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 0 auto;
-        height: 340px;
-    }
-    #about .about_3_parag {
-        width: 90%;
-    }
-    .footer4 p {
-        width: 90%;
-    }
-}
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-    .content_big_title{
-        padding: 12px 35px 12px 15px;
-    }
-    .company_content_img_all{
-        float: initial;
-        width: 320px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .company_content_parag_all{
-        float: inherit;
-        width: 282px;
-        position: relative;
-        min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 0 auto;
-        height: 430px;
-    }
-    /* About */
-    #about .about_1 .content_big_title {
-        padding: 12px 30px 12px 15px;
-    }
-}
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-	#contact .content_big_title{
-		padding: 12px 30px 12px 15px;
-	}
 }
