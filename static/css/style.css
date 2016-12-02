@@ -163,11 +163,12 @@ button{
     padding-left: 70px;
 }
 .fullbg_bigtxt{
-    text-transform: uppercase;
+    font-family: 'Eczar', cursive, sans-serif;
+    letter-spacing: 4px;
     color: white;
-    font-size: 48px;
-    margin-top: 30px;
-    font-weight: 700;
+    font-size: 75px;
+    padding-top: 146px;
+    padding-left: 90px;
 }
 .fullbg_smalltxt{
     color: white;
