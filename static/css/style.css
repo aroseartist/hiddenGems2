@@ -14,6 +14,9 @@ p{
     color: #505050;
     font-size: 14px;
 }
+p.desc {
+    text-align: justify;
+}
 a, input[type="submit"], input[type="reset"]{
     text-decoration: none;
     -webkit-transition: all 0.2s linear;
@@ -38,6 +41,23 @@ button{
 }
 #details {
     text-align: left;
+}
+.parent {
+    position: relative;
+}
+.toggled {
+    position: absolute;
+    padding: 10px;
+    top: 140px;
+    left: -40px;
+    background: rgba(255,255,255,0.9);
+    width: 364px;
+    z-index: 1000;
+}
+#home {
+    width:100%;
+    height:auto;
+    position:relative;  
 }
 
 /* Map */
@@ -113,11 +133,7 @@ button{
   }
 }
 
-#home {
-    width:100%;
-    height:auto;
-    position:relative;  
-}
+/* Slide Img */
 #slides_background_home {
     position: relative;
     background-color:black;
