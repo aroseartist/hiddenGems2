@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  	{% block head %}
+
+<head>
+    {% block head %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Locally Owned, Privately Operated Spaces">
     <meta name="author" content="Evlyn Andrade and Lora Rose">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../static/img/favicon.ico">
-
     <title>Hidden Gems</title>
 
-    <!-- CSS Files --> 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../static/img/favicon.ico">
+    <!-- CSS Files -->
     <link href="../static/css/reset.css" rel="stylesheet">
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
@@ -20,221 +20,208 @@
     <link href="../static/css/font-awesome.min.css" rel="stylesheet">
     <link href="../static/css/jquery.bxslider.css" rel="stylesheet">
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Mapbox -->
-	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-	<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
-	<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' /> {% endblock %}
+</head>
 
-  {% endblock %}	
-  </head>
-  <body>
-{% block body %}
-	
-	<!-- Loader page -->
-	<div id="pageloader">   
-	    <div class="loader-item text-center">
-	        <div class="loader"></div>
-	    </div>
-	</div>
+<body>
+    {% block body %}
 
-	<!-- Primary Page Layout -->		
-	<div id="home">
-		<div id="slides_background_home">
-			<div class="slides-container">
-				<div class="img0"></div>
-			</div>
-		</div>
-			
-		<div class="container main">
-			<div class="fullbg_bigtxt">HIDDEN GEMS</div>
-		</div>	
-	</div>
+    <!-- Loader page -->
+    <div id="pageloader">
+        <div class="loader-item text-center">
+            <div class="loader"></div>
+        </div>
+    </div>
 
-	<!-- Places Section -->
-	<section id="company" class="container">
-		<div class="big_title">
-			<div class="big_title_txt montserrat_font">Privately-Owned Public Open Spaces</div>
-			<div class="text_und_big_title">
-				<p>Privately-owned public open spaces (POPOS) are publicly accessible spaces in forms of plazas, terraces, atriums, small parks, and even snippets which are provided and maintained by private developers. In San Francisco, POPOS mostly appear in the Downtown office district area. Prior to 1985, developers provided POPOS under three general circumstances: voluntarily, in exchange for a density bonus, or as a condition of approval. The 1985 Downtown Plan created the first systemic requirements for developers to provide publicly accessible open space as a part of projects in C-3 Districts. The goal was to “provide in the downtown quality open space in sufficient quantity and variety to meet the needs of downtown workers, residents and visitors.” (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_138" target="_blank">See Planning Code Section 138 for regulations</a>).&nbsp;Since then, project sponsors for residential projects may provide POPOS instead of their required open spaces in the Downtown Residential (DTR) and Eastern Neighborhoods (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_135" target="_blank">Section 135 of the Planning Code</a>).</p>
-			</div>
-			<div class="big_title_txt_separ background_color"></div>
-		</div>
-	</section>
-		
-	{% if places %}
-		{% for place in places %}
-		<div class="parent">
-			<div class="row col-md-3">
-				<div class="company_img_block company_btn1">
-	                <img src="{{ place.place_photo }}" class="popos_img img"  type="button" id="button_{{ place.place_photo }}">
-	                <div class="company_img_desc">{{ place.title }}</div>
-            	</div>
-			</div>
+    <!-- Primary Layout -->
+    <div id="home">
+        <div id="slides_background_home">
+            <div class="slides-container">
+                <div class="img0"></div>
+            </div>
+        </div>
+        <div class="container main">
+            <div class="fullbg_bigtxt">HIDDEN GEMS</div>
+        </div>
+    </div>
 
-			<div class="toggled col-md-9 hidden">
-				<div id="details_{{ place.place_photo }}">
-					<p>
-					<b>Description:</b> {{ place.description }}<br/>
-					<b>Address:</b> {{ place.address }}<br/>
-					<b>Neighborhood:</b> {{ place.neighborhood }}<br/>
-					<b>Hours:</b> {{ place.hours }}<br/>
-					<b>Features:</b> {{ place.features }}<br/>
-					<b>Wifi:</b> {{ place.wifi }}<br/>
-					<b>Restroom:</b> {{ place.restroom }}<br/>
-					<b>Seating:</b> {{ place.seating }}<br/>
-					<b>Wheelchair Accessible:</b> {{ place.wheelchair_accessible }}<br/>
-					<b>Indoor or Outdoor:</b> {{ place.indoor_outdoor }}<br/>
-					</p>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
-	{% endif %}
+    <!-- About -->
+    <section id="company" class="container">
+        <div class="big_title">
+            <div class="big_title_txt montserrat_font">Privately-Owned Public Open Spaces</div>
+            <div class="text_und_big_title">
+                <p>Privately-owned public open spaces (POPOS) are publicly accessible spaces in forms of plazas, terraces, atriums, small parks, and even snippets which are provided and maintained by private developers. In San Francisco, POPOS mostly appear in the Downtown office district area. Prior to 1985, developers provided POPOS under three general circumstances: voluntarily, in exchange for a density bonus, or as a condition of approval. The 1985 Downtown Plan created the first systemic requirements for developers to provide publicly accessible open space as a part of projects in C-3 Districts. The goal was to “provide in the downtown quality open space in sufficient quantity and variety to meet the needs of downtown workers, residents and visitors.” (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_138" target="_blank">See Planning Code Section 138 for regulations</a>).&nbsp;Since then, project sponsors for residential projects may provide POPOS instead of their required open spaces in the Downtown Residential (DTR) and Eastern Neighborhoods (<a href="http://library.amlegal.com/nxt/gateway.dll/California/planning/article12dimensionsareasandopenspaces?f=templates$fn=default.htm$3.0$vid=amlegal:sanfrancisco_ca$anc=JD_135" target="_blank">Section 135 of the Planning Code</a>).</p>
+            </div>
+            <div class="big_title_txt_separ background_color"></div>
+        </div>
+    </section>
 
-	<!-- Mapbox View -->
-	<section id="map_div" class="container">
-	<div class="section_content">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="big_title_txt_separ background_color"></div></br>
-				<div id='map' style='width: 1100px; height: 500px;'></div>
-			</div>
-		</div>
-	</div>
-	<div class="big_title_txt_separ background_color"></div>
-	</section>
+    <!-- POPOS -->
+    <section id="company" class="container">
+        {% if places %}
+        <div class="container">
+        <div class="row">
+            {% for place in places %}
+            <div class="parent col-md-3">
+                <div class="company_img_block company_btn1">
+                    <img src="{{ place.place_photo }}" class="popos_img img" type="button" id="button_{{ place.place_photo }}">
+                    <div class="company_img_desc">{{ place.title }}</div>
+                </div>
+                <div class="toggled hidden">
+                    <div id="details_{{ place.place_photo }}">
+                        <p class="desc">{{ place.description }}</p>
+                        <p>
+                            <b>Address |</b> {{ place.address }}<br/>
+                            <b>Neighborhood |</b> {{ place.neighborhood }}<br/>
+                            <b>Hours |</b> {{ place.hours }}<br/>
+                            <b>Features |</b> {{ place.features }}<br/>
+                            <b>Wifi |</b> {{ place.wifi }}<br/>
+                            <b>Restroom |</b> {{ place.restroom }}<br/>
+                            <b>Seating |</b> {{ place.seating }}<br/>
+                            <b>Wheelchair Accessible |</b> {{ place.wheelchair_accessible }}<br/>
+                            <b>Indoor or Outdoor |</b> {{ place.indoor_outdoor }}<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        {% endif %}
+    </section>
+    
+    <!-- Mapbox View -->
+    <section id="map_div" class="container">
+        <div class="section_content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="big_title_txt_separ background_color"></div>
+                    </br>
+                    <div id='map' style='width: 1100px; height: 500px;'></div>
+                </div>
+            </div>
+        </div>
+        <div class="big_title_txt_separ background_color"></div>
+    </section>
+    
+    <!-- Contact Us -->
+    <section id="contact" class="container">
+        <div class="section_content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content_big_title">
+                    <span class="text_color">Evlyn</span> Andrade
+                </div>
+                <p class='contact_desc'>I'm full stack software engineer with multiple years of management experience. My focus is on how technology can solve many of today’s societal problems. As a proud Latina, I look forward to contributing my technical skills, diverse background and work experiences to an innovative and collaborative engineering team. I'm always open to learning about new opportunities, feel free to connect:</p>
+                <div class="contact_right_details">
+                    <div class="">
+                        <a href="https://www.google.com/maps/place/Oakland-CA" class="link_hoverw" target="_blank"><i class="fa fa-map-marker text_color"></i><span>Oakland, CA</a></span>
+                    </div>
+                    <div class="">
+                        <a href="mailto:andrade.evlyn@gmail.com" class="link_hoverw" target="_top"><i class="fa fa-envelope text_color"></i><span>andrade.evlyn@gmail.com</a></span>
+                    </div>
+                    <div class="">
+                        <a href="https://www.linkedin.com/in/evlynandrade" class="link_hoverw" target="_blank"><i class="fa fa-globe text_color"></i><span>www.linkedin.com/in/evlynandrade</a></span>
+                    </div>
+                </div>
+                <div class="follow_us">
+                    <a href="https://www.linkedin.com/in/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://twitter.com/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
+                    <a href="https://github.com/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-github"></i> </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content_big_title">
+                    Lora <span class="text_color">"Ro"</span> Rose
+                </div>
+                <p class='contact_desc'>Lora is a marketing engineer with years of experience producing events, data analysis and reporting, and program development. The cross sections of software engineering, developer evangelism, data visualization, and marketing analytics are her sweet spots. She is seeking a position in which to offer her honed skill sets, using knowledge as a catalyst to drive growth, development, and community.</p>
+                <div class="contact_right_details">
+                    <div class="">
+                        <a href="https://www.google.com/maps/place/Oakland-CA" class="link_hoverw" target="_blank"><i class="fa fa-map-marker text_color"></i><span>Oakland, CA</a></span>
+                    </div>
+                    <div class="">
+                        <a href="mailto:aroseartist@gmail.com" class="link_hoverw" target="_top"><i class="fa fa-envelope text_color"></i><span>aroseartist@gmail.com</a></span>
+                    </div>
+                    <div class="">
+                        <a href="http://www.aroseartist.com" class="link_hoverw" target="_blank"><i class="fa fa-globe text_color"></i><span>www.aroseartist.com</a></span>
+                    </div>
+                </div>
+                <div class="follow_us">
+                    <a href="https://www.linkedin.com/in/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-linkedin"></i> </a>
+                    <a href="http://www.twitter.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
+                    <a href="https://github.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-github"></i> </a>
+                    <a href="http://www.aroseartist.com/blog" class="follow_us_btn " target="_blank"><i class="fa fa-rss"></i> </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    {% endblock %}
 
-
-	<!-- Contact Us Section -->	
-	<section id="contact" class="container">	
-		<div class="section_content">
-			<div class="row">
-
-				<div class="col-md-6">
-					<div class="content_big_title">
-						<span class="text_color">Evlyn</span> Andrade
-					</div>
-					<p class='contact_desc'>I'm full stack software engineer with multiple years of management experience. My focus is on how technology can solve many of today’s societal problems. As a proud Latina, I look forward to contributing my technical skills, diverse background and work experiences to an innovative and collaborative engineering team. I'm always open to learning about new opportunities, feel free to connect:</p>
-					<div class="contact_right_details">
-						<div class="">
-							<a href="https://www.google.com/maps/place/Oakland-CA" class="link_hoverw" target="_blank">
-							<i class="fa fa-map-marker text_color"></i> 
-							<span>Oakland, CA</span>
-						</div>
-						<div class="">
-							<a href="mailto:andrade.evlyn@gmail.com" class="link_hoverw" target="_top">
-							<i class="fa fa-envelope text_color"></i> 
-							<span>andrade.evlyn@gmail.com</a></span>
-						</div>
-						<div class="">
-							<a href="https://www.linkedin.com/in/evlynandrade" class="link_hoverw" target="_blank">
-							<i class="fa fa-globe text_color"></i> 
-							<span>www.linkedin.com/in/evlynandrade</a></span>
-						</div>
-					</div>
-					<div class="follow_us">
-						<a href="https://www.linkedin.com/in/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-linkedin"></i> </a>
-						<a href="https://twitter.com/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
-						<a href="https://github.com/evlynandrade" class="follow_us_btn " target="_blank"><i class="fa fa-github"></i> </a>
-					</div>
-				</div>	
-				
-				<div class="col-md-6">
-					<div class="content_big_title">
-						Lora <span class="text_color">"Ro"</span> Rose
-					</div>
-					<p class='contact_desc'>Lora is a marketing engineer with years of experience producing events, data analysis and reporting, and program development. The cross sections of software engineering, developer evangelism, data visualization, and marketing analytics  are her sweet spots. She is seeking a position in which to offer her honed skill sets, using knowledge as a catalyst to drive growth, development, and community.</p>
-					<div class="contact_right_details">
-						<div class="">
-							<a href="https://www.google.com/maps/place/Oakland-CA" class="link_hoverw" target="_blank">
-							<i class="fa fa-map-marker text_color"></i> 
-							<span>Oakland, CA</span>
-						</div>
-						<div class="">
-							<a href="mailto:aroseartist@gmail.com" class="link_hoverw" target="_top">
-							<i class="fa fa-envelope text_color"></i> 
-							<span>aroseartist@gmail.com</a></span>
-						</div>
-						<div class="">
-							<a href="http://www.aroseartist.com" class="link_hoverw" target="_blank">
-							<i class="fa fa-globe text_color"></i> 
-							<span>www.aroseartist.com</a></span>
-						</div>
-					</div>
-					<div class="follow_us">
-						<a href="https://www.linkedin.com/in/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-linkedin"></i> </a>
-						<a href="http://www.twitter.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-twitter"></i> </a>
-						<a href="https://github.com/aroseartist" class="follow_us_btn " target="_blank"><i class="fa fa-github"></i> </a>
-						<a href="http://www.aroseartist.com/blog" class="follow_us_btn " target="_blank"><i class="fa fa-rss"></i> </a>
-					</div>
-				</div>
-			</div>	
-		</div>
-	</section>
-{% endblock %}	
-	
-	<!-- Footer -->
-	<footer>
-		<div class="footer4"></div>
-	</footer>
-
-	<!-- js Scripts -->
-	
-	<!-- Img Dtl Toggle -->
-	<script type="text/javscript">
-		$(document).ready(function() {          
-		    $('.popos_img').on('click', function() {
-		        $(this).closest('div.parent').find('div.toggled').toggleClass('hidden');
-		    });
-		});
+    <!-- Footer -->
+    <footer>
+        <div class="footer4"></div>
+    </footer>
+    
+    <!-- Img Dtl Toggle -->
+    <script src="../static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+	    $(document).on('click', '.popos_img', function() {
+	        $('.parent div.toggled').addClass('hidden');
+	        var $container = $(this).closest('div.parent');
+	        $container.find('div.toggled').removeClass('hidden');
+	    });
+	    $(document).on('click', 'div.toggled', function() {
+	        $(this).addClass('hidden');
+	    });
     </script>
+
     <!-- Map -->
     <script>
-		 L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
-	    var map = L.mapbox.map('map', 'sf-treasure.1gdia4nf', { 
+	    L.mapbox.accessToken = 'pk.eyJ1Ijoic2YtdHJlYXN1cmUiLCJhIjoiY2lzeHQweHo5MGFrejJ6a2hoZXpybWdvZSJ9.9YGAsX45E8bY-r_MGA92Ew';
+	    var map = L.mapbox.map('map', 'sf-treasure.1gdia4nf', {
 	        container: 'map',
 	        // center: [37.793190, -122.399947], // starting position
 	        // zoom: 16, // starting zoom
 	        scrollWheelZoom: false,
 	    });
-	</script>
+    </script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../static/js/jquery-1.11.0.min.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>
     <!-- Plugins for Bootstrap -->
     <script src="../static/js/bootstrap.min.js"></script>
-	<!-- Jquery Appear -->
+    <!-- Jquery Appear -->
     <script src="../static/js/jquery.appear.js"></script>
-	<!-- jQuery Easing v1.3 -->
+    <!-- jQuery Easing v1.3 -->
     <script src="../static/js/jquery.easing.1.3.js"></script>
-	<!-- Modernizr v2.7.1 -->
-	<script src="../static/js/modernizr-latest.js"></script> 
-	<!-- enquire -->
-	<script src="../static/js/enquire.min.js"></script> 
-	<!-- WoW animation -->
-	<script src="../static/js/wow.min.js"></script>
-	<!-- Superslides - v0.6.2 - 2013-07-10 -->
-	<script src="../static/js/jquery.superslides.min.js"></script>
-	<!-- jPlayer 2.6.0 -->
-	<script src="../static/js/jquery.jplayer.min.js"></script>
-	<!-- Isotop -->
-	<script src="../static/js/jquery.isotope.min.js"></script>
-	<!-- jQuery countTo Plugin -->
-	<script src="../static/js/jquery.countTo.js"></script>
-	<!-- Sticky -->
-	<script src="../static/js/jquery.sticky.js"></script>
-	<!-- Nice Scroll -->
-	<script src="../static/js/jquery.nicescroll.js"></script>
-	<!-- bxslider -->
-	<script src="../static/js/jquery.bxslider.min.js"></script>
-	<!--jquery.mb.YTPlayer JS -->
-	<script src="../static/js/jquery.mb.YTPlayer.js"></script>	
-	<!-- One Page Nav -->
-	<script src="../static/js/jquery.nav.js"></script>
-	<!-- jQuery code for plugins -->
+    <!-- Modernizr v2.7.1 -->
+    <script src="../static/js/modernizr-latest.js"></script>
+    <!-- enquire -->
+    <script src="../static/js/enquire.min.js"></script>
+    <!-- WoW animation -->
+    <script src="../static/js/wow.min.js"></script>
+    <!-- Superslides - v0.6.2 - 2013-07-10 -->
+    <script src="../static/js/jquery.superslides.min.js"></script>
+    <!-- jPlayer 2.6.0 -->
+    <script src="../static/js/jquery.jplayer.min.js"></script>
+    <!-- Isotop -->
+    <script src="../static/js/jquery.isotope.min.js"></script>
+    <!-- jQuery countTo Plugin -->
+    <script src="../static/js/jquery.countTo.js"></script>
+    <!-- Sticky -->
+    <script src="../static/js/jquery.sticky.js"></script>
+    <!-- Nice Scroll -->
+    <script src="../static/js/jquery.nicescroll.js"></script>
+    <!-- bxslider -->
+    <script src="../static/js/jquery.bxslider.min.js"></script>
+    <!--jquery.mb.YTPlayer JS -->
+    <script src="../static/js/jquery.mb.YTPlayer.js"></script>
+    <!-- One Page Nav -->
+    <script src="../static/js/jquery.nav.js"></script>
+    <!-- jQuery code for plugins -->
     <script src="../static/js/script.js"></script>
-    
-  </body>
+</body>
+
 </html>
