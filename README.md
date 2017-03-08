@@ -2,10 +2,9 @@
 
 * [About](#about)
 * [Technologies](#tech)
-* [Development](#dev)
 * [User Experience](#user)
 * [Run Locally](#run)
-* [Author](#author)
+* [Authors](#author)
 
 ## <a name="about"></a>About
 
