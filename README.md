@@ -2,16 +2,14 @@
 
 * [About](#about)
 * [Technologies](#tech)
-* [Development](#dev)
 * [User Experience](#user)
 * [Run Locally](#run)
-* [Author](#author)
+* [Authors](#author)
 
 ## <a name="about"></a>About
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Hidden Gems is a visual map for urban park lovers to discover nearby Privately-Owned Public Open Spaces (POPOS) in San Francisco.
 
-Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. 
 
 ### Wish List for v1.2
 * [Locator > Map](https://www.mapbox.com/help/building-a-store-locator/#finished-product)
@@ -30,23 +28,9 @@ Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor
 
 ####**Test Coverage -** [90% unittest coverage](tests.py)
 
-## <a name="dev"></a>Development
-
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.*
-
-Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-
-Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.
-
 ## <a name="user"></a>User Experience
-### Popular Words by State Representatives
 
-#### Most Frequently Used Words In Congress, Per State -
-Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-
-![Places Details](markdown/img_desc.gif "Details")
-
-Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+![Places Details](markdown/img_desc.gif "Details") 
 
 ![Mapbox](markdown/map.gif "Mapbox")
 
@@ -73,13 +57,11 @@ Install the required Python packages & dependencies
 	
 	$ pip install -r requirements.txt
 
-# < Add SQL info here >
-
 In your command line, start up the flask server
 	
 	$ python server.py
 	
-In your borwser, go to localhost:5000 to see the web app
+In your browser, go to localhost:5000 to see the web app
 
 ## <a name="author"></a>Authors
 
